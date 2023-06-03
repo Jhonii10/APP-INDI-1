@@ -1,11 +1,11 @@
 import React from 'react';
+import './App.css'
+import Rutas from './routes/PublicRutas';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        INICIO DEL PROYECTO
-      </header>
+      <Rutas/>
     </div>
   );
 }
