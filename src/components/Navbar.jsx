@@ -8,38 +8,40 @@ const Navbar = () => {
     
     {
         label:'Products',
-        url:'/'
+        url:'/productos'
     },
     {
         label:'locations',
-        url:'/'
+        url:'/ubicaciones'
     },
     {
         label:'Employees',
-        url:'/'
+        url:'/empleados'
     },
     {
         label:'Jobs',
-        url:'/'
+        url:'/trabajos'
     },
     {
         label:'Contacts',
-        url:'/'
+        url:'/contactanos'
     },
     {
         label:'About',
-        url:'/'
+        url:'/quienes-somos'
     },
     
     
   ]
 
+  
+
 
     return (
         <div>
-            <header className='bg-white border'>
-                <div className='mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8'>
-                    <NavLink className='block text-blue-600' href='#!'>
+            <header className='bg-white border border-b-zinc-400'>
+                <div className='mx-auto flex h-16 max-w-screen-2xl items-center gap-8 px-4 sm:px-6 lg:px-8 ' >
+                    <NavLink className='block text-blue-600' to='/'>
                         <span className=''>Logo</span>
                     </NavLink>
 
@@ -52,6 +54,7 @@ const Navbar = () => {
                     return (<li key={elements.label}>
                         <NavLink className='text-gray-600 transition hover:text-black-500/75' to={elements.url}>
                            {elements.label}
+                           {console.log(elements.url)}
                         </NavLink>
                     </li>)
                 })
