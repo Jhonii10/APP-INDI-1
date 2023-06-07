@@ -21,15 +21,7 @@ const Navbar = () => {
     {
         label:'Jobs',
         url:'/trabajos'
-    },
-    {
-        label:'Contacts',
-        url:'/contactanos'
-    },
-    {
-        label:'About',
-        url:'/quienes-somos'
-    },
+    }
     
     
   ]
@@ -39,8 +31,8 @@ const Navbar = () => {
 
     return (
         <div>
-            <header className='bg-white border border-b-zinc-400'>
-                <div className='mx-auto flex h-16 max-w-screen-2xl items-center gap-8 px-4 sm:px-6 lg:px-8 ' >
+            <header className='bg-white border border-b-zinc-400 '>
+                <div className='mx-auto flex h-16 max-w-screen-2xl items-center gap-8 px-4 sm:px-6 lg:px-8 h-24 ' >
                     <NavLink className='block text-blue-600' to='/'>
                         <span className=''>Logo</span>
                     </NavLink>
@@ -48,6 +40,7 @@ const Navbar = () => {
                     <div className='flex flex-1 items-center justify-end md:justify-between'>
                     <nav aria-label="Site Nav" class="hidden md:block">
         <ul class="flex items-center gap-6 text-lg">
+        
 
             {
                 menuItems.map((elements)=>{
