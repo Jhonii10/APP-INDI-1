@@ -95,3 +95,53 @@
 .buttons button:hover{
   opacity: 1p;
 }
+
+
+.dropdown-menu {
+  position: absolute;
+  background-color: red !important;
+  padding: 56px !important;
+  width: 100% !important;
+  animation-duration:1s;
+  animation:slideIn 1s forwards;
+  transform-origin: top center;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+
+.container{
+  max-width: none !important;
+  margin: 0 56px 0 56px !important;
+}
+
+.jn-10-1{
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+  text-align: center;
+  gap:12px
+}

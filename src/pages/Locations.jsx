@@ -6,7 +6,7 @@ const Locations = () => {
         <div>
             
             <Breadcrumbs/>
-            <h1>Locations</h1>
+            <h1>Locations</h1>  
         </div>
     );
 }

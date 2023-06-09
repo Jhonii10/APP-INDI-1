@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import SliderShow from '../components/SliderShow';
 
 const Index = () => {
@@ -9,7 +8,7 @@ const Index = () => {
         <SliderShow/>
         </div>
         
-        <div class="bg-white">
+        <div className="bg-white">
   Contenido adicional después del scroll
 </div>
         </div>
