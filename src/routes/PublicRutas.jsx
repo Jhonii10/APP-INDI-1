@@ -8,6 +8,7 @@ import Employees from '../pages/Employees';
 import Jobs from '../pages/Jobs';
 import Contact from '../pages/Contact';
 import About from '../pages/About';
+import Example from '../pages/Example';
 
 const Rutas = () => {
     return (
@@ -20,7 +21,8 @@ const Rutas = () => {
                 <Route path='/empleados' element={<Employees/>}/>
                 <Route path='/trabajos' element={<Jobs/>}/>
                 <Route path='/contactanos' element={<Contact/>}/>
-                <Route path='/quienes-somos' element={<About/>}/>
+                <Route path='/Porque-Nosotros' element={<About/>}/>
+                <Route path='/example' element={<Example/>}/>
             </Routes>
         </BrowserRouter>
     );
