@@ -3,7 +3,7 @@ import Breadcrumbs from '../components/BreadCrums'
 
 const Employees = () => {
   return (
-    <div>
+    <div className='pt-24'>
         
         <Breadcrumbs/>
         <h1>Employees</h1>

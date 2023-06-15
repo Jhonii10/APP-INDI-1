@@ -3,7 +3,7 @@ import Breadcrumbs from '../components/BreadCrums';
 
 const Locations = () => {
     return (
-        <div>
+        <div className='pt-24'>
             
             <Breadcrumbs/>
             <h1>Locations</h1>  
