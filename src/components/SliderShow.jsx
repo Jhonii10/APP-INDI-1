@@ -41,7 +41,7 @@ const SliderShow = () => {
 
     return (
         <>
-        <div className="slider h-auto w-full">
+        <div className="slider h-auto w-full" >
       {/* Mostrar la diapositiva actual */}
       <div className="slides">{images[currentImage]}</div>
 
@@ -55,7 +55,7 @@ const SliderShow = () => {
       
       </div>
       {/* Dots que representan cada diapositiva */}
-      <div className="dots">
+      <div className="dots ">
         {images.map((img,index) => (
           <span
             key={index}

@@ -3,7 +3,7 @@ import Breadcrumbs from '../components/BreadCrums';
 
 const Contact = () => {
     return (
-        <div>
+        <div className='pt-24'>
         <Breadcrumbs/>
             <h2>Contact</h2>
         </div>
