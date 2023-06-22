@@ -7,7 +7,7 @@ const Index = () => {
     return (
         <>
         <div>
-            <div className='j-10-10 bg-red-300 pt-24'>
+            <div className='j-10-10 pt-24'>
             <section>
   <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8  py-16 ">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">

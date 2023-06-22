@@ -96,16 +96,22 @@
 
 .dropdown-menu {
   position: absolute;
-  background-color: red !important;
   
   width: 100%!important;
   animation-duration:1s;
   animation:slideIn 1s forwards;
   transform-origin: top center;
   opacity: 0;
-  top: 4.5rem;
+  top: 7rem;
   z-index:1;
+
+  width: 100%;
+  background-color:#f6f1ec;
+  padding: 4rem;
+  box-sizing: border-box;
 }
+
+
 
 @keyframes slideIn {
   from {
@@ -120,15 +126,19 @@
   
 }
 
-@keyframes slideOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
+
+.dropdown-menu::before{
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: -0.375rem;
+  left: 264px;
+  margin-left: -0.375rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  transform: rotate(45deg);
+  background-color: #f6f1ec;
 }
 
 
@@ -149,7 +159,6 @@
   min-height: calc(100*7.07px);
   position: relative;
   padding: calc(5rem + 2.5rem) 0;
-  background-color: rgb(242, 242, 242);
 }
 
 
@@ -166,4 +175,41 @@
   .j-10-10 {
     padding:calc(3rem + 1.5rem) 0 1.875rem;
 }
+}
+
+
+.jhoni-ul-10{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+}
+
+.jhoni-ul-10 li {
+  margin: 1.25rem 2.5rem 0;
+}
+
+.jhoni-ul-10-a{
+  min-width: 8rem;
+  max-width: 12.5rem;
+  padding-bottom: 0.625rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ 
+
+.jhoni-ul-10-div{
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
