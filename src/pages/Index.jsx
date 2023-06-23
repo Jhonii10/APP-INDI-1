@@ -2,22 +2,22 @@ import React from 'react';
 import SliderShow from '../components/SliderShow';
 import { NavLink } from 'react-router-dom';
 import Lista from '../components/Lista';
+import Testimonial from '../components/Testimonial';
 
 const Index = () => {
     return (
         <>
-        <div>
-            <div className='j-10-10 pt-24'>
-            <section>
-  <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8  py-16 ">
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-      <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
-        <img
-          alt="Party"
-          src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-      </div> 
+        <div className='j-10-10 lg:h-screen '>
+             
+          <div className=" mx-auto min-1200 px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 ">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  w-full">
+                <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+                <img
+                 alt="Party"
+                 src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                 className="absolute inset-0 h-full w-full object-cover "
+                />
+                 </div> 
                 <div className=" max-w-lg lg:text-left">
                     <h1 className=" font-bold md:text-3xl lg:text-5xl ">
                         Organic Wooden Toys 
@@ -72,7 +72,7 @@ const Index = () => {
     
     </div>
   </div>
-</section>
+
 
     <div class="absolute bottom-4 left-4 z-2 max-sm:hidden  ">
     <div class="flex flex-row items-center justify-start select-none cursor-pointer text-md leading-2" role="button" tabindex="0">
@@ -88,13 +88,14 @@ const Index = () => {
         
 
   
-        </div>
+       
 
-        <div className='border border-black'>
-            <div className='my-8'>
-            <h2 className='text-lg'>Dropdown</h2>
-            <div className='border border-black'>
+        <div className='px-4 lg:px-16'>
+            <div className='mt-12'>
+            <h2 className='jhoni-font'>Dropdown</h2>
+            <div className=' mt-12'>
                 <Lista/>
+                <Testimonial/>
             </div>
             </div>
 
