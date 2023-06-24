@@ -1,6 +1,4 @@
 import React from 'react';
-import SliderShow from '../components/SliderShow';
-import { NavLink } from 'react-router-dom';
 import Lista from '../components/Lista';
 import Testimonial from '../components/Testimonial';
 
@@ -85,11 +83,7 @@ const Index = () => {
     </div>
 
         </div>
-        
-
-  
-       
-
+    
         <div className='px-4 lg:px-16'>
             <div className='mt-12'>
             <h2 className='jhoni-font'>Dropdown</h2>
