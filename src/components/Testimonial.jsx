@@ -27,8 +27,6 @@ const Testimonial = () => {
     },
    ]
 
-  console.log()
-
     return (
         <div>
             <section className="bg-white">

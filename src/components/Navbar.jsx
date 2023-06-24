@@ -1,32 +1,9 @@
 import React, {  useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Lista from './Lista';
 
 const Navbar = () => {
 
-
-    const menuItems = [
-        {
-          label: 'Products',
-          url: '/productos',
-          img:'/assets/puzzles.svg'
-        },
-        {
-          label: 'Locations',
-          url: '/ubicaciones',
-          img:'/assets/constructor.svg'
-        },
-        {
-          label: 'Employees',
-          url: '/empleados',
-          img:'/assets/puzzles.svg'
-        },
-        {
-          label: 'Jobs',
-          url: '/trabajos',
-          img:'/assets/constructor.svg'
-        },
-      ];
-    
       const about = [
         {
           label: 'Porque Nosotros',
@@ -62,7 +39,7 @@ const Navbar = () => {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <span className="mr-1 text-md">Dropdown</span>
+              <span className="mr-1 text-md">Recursos</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 fill-current text-gray-600"
@@ -82,32 +59,8 @@ const Navbar = () => {
               <div className='right-0 dropdown-menu '
               onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}>  
-              <ul
-                className="jhoni-ul-10 "
-                
-              >
-                {menuItems.map((item) => (
-                  <li key={item.url} className="">
-                    
-                    <NavLink
-                      className="jhoni-ul-10-a  "
-                      to={item.url}
-                      onClick={''}
-                    > 
-                      <div className='jhoni-ul-10-div'>
-                      <img src={item.img} alt='' />
-                      </div>
-                      <div>
-                      {item.label}
-                      </div>
-                      
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
+              <Lista/>
               </div>
-              
-              
             )}  
           
 
