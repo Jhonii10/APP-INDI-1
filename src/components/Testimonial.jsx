@@ -42,6 +42,15 @@ const Testimonial = () => {
         }
       
     </div>
+    <div className='mt-24'>
+                <div className='jhoni-button-10'>
+                
+                <button class=" font-bold rounded-full  " type="button">
+                    Ver todos nuestros productos
+                    </button>
+                    
+                    </div>
+                    </div>
   </div>
 </section>
 
