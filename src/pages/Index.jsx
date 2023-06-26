@@ -1,6 +1,9 @@
 import React from 'react';
 import Lista from '../components/Lista';
 import Testimonial from '../components/Testimonial';
+import SectionJob from '../components/SectionJob';
+import CustomersReviews from '../components/CustomersReviews';
+import Footer from '../components/Footer';
 
 const Index = () => {
     return (
@@ -90,10 +93,16 @@ const Index = () => {
             <div className=' mt-12'>
                 <Lista/>
                 <Testimonial/>
+                
+
             </div>
             </div>
 
         </div>
+
+        <SectionJob/>
+        <CustomersReviews/>
+        <Footer/>
         </>
         
 
