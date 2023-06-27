@@ -5,7 +5,7 @@ const Lista = () => {
 
   const menuItems = [
     {
-      label: 'Products',
+      label: 'Categoria',
       url: '/productos',
       img:'/assets/puzzles.svg'
     },
