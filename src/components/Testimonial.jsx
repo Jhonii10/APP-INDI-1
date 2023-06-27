@@ -32,7 +32,7 @@ const Testimonial = () => {
             <section className="bg-white">
   <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
     <h2 className="text-center text-4xl font-bold tracking-tight sm:text-5xl">
-      Productos destacados
+      Categorias destacadas
     </h2>
     <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
       {
@@ -46,7 +46,7 @@ const Testimonial = () => {
                 <div className='jhoni-button-10'>
                 
                 <button class=" font-bold rounded-full  " type="button">
-                    Ver todos nuestros productos
+                    Ver todas nuestras categorias
                     </button>
                     
                     </div>
