@@ -1,15 +1,12 @@
 import React, {  useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Lista from './Lista';
+import MenuPhone from './MenuPhone';
 
 
 const Navbar = () => {
 
-  const [menuVisible, setMenuVisible] = useState(false);
-
-  const handleMenuToggle = () => {
-    setMenuVisible(!menuVisible);
-  };
+  
 
       const about = [
         {
@@ -100,27 +97,9 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        <div className='block rounded-full p-2 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden z-30' 
-        style={{
-          background:'#f6f1ec'
-        }}
-        >
-        <button className={` menu-button ${menuVisible ? 'open' : ''}`} onClick={handleMenuToggle}>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </button>
-      </div>
-      <div className={` menu ${menuVisible ? 'visible' : ''} `}>
-        <div className='menu-2'>
-          <div className='menu-3'>
-             <h2 className='text-3xl'>Categoria</h2>
-             
+        <MenuPhone/>
 
-          </div>
-        </div>
         
-      </div>
 
       </div>
     </div>

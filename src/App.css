@@ -547,6 +547,9 @@ input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   background-color: #fff;
+  min-height: 100%;
+  display: grid;
+  padding-top: 6rem;
 }
 
 .menu-3{
@@ -555,8 +558,32 @@ input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 6.5rem;
-  padding-bottom: calc(var(--metric)*50);
-  min-height: 100%;
+  
 }
 
+
+.jhoni-phone-ul{
+  margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid ;
+    border-bottom: 1px solid ;
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.jhoni-phone-ul li{
+  font-size: 1.125rem;
+  line-height: 200%;
+}
+
+.jhoni-phone-ul a{
+  transition: color .35s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+}
