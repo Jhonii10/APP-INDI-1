@@ -58,7 +58,7 @@ const CustomersReviews = () => {
     <div className='mt-4'>
                 <div className='jhoni-button-10'>
                 
-                <button class=" font-bold rounded-full  " type="button">
+                <button className=" font-bold rounded-full  " type="button">
                     Ver mas
                     </button>
                     
