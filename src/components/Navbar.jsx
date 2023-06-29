@@ -2,7 +2,14 @@ import React, {  useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Lista from './Lista';
 
+
 const Navbar = () => {
+
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuVisible(!menuVisible);
+  };
 
       const about = [
         {
@@ -92,23 +99,29 @@ const Navbar = () => {
             Register
           </NavLink>
         </div>
-        <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
-          <span className="sr-only">Toggle menu</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+
+        <div className='block rounded-full p-2 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden z-30' 
+        style={{
+          background:'#f6f1ec'
+        }}
+        >
+        <button className={` menu-button ${menuVisible ? 'open' : ''}`} onClick={handleMenuToggle}>
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </button>
+      </div>
+      <div className={` menu ${menuVisible ? 'visible' : ''} `}>
+        <div className='menu-2'>
+          <div className='menu-3'>
+             <h2 className='text-3xl'>Categoria</h2>
+             
+
+          </div>
+        </div>
+        
+      </div>
+
       </div>
     </div>
   </div>
