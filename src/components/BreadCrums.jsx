@@ -10,7 +10,6 @@ const Breadcrumbs = () => {
       <ul className="flex space-x-2 items-center">
         <li>
           <Link to="/" className="hover:text-gray-700 ">
-          <span class="sr-only"> Home </span>
 
           <svg
            xmlns="http://www.w3.org/2000/svg"
@@ -35,10 +34,10 @@ const Breadcrumbs = () => {
 
           return (
             <li key={routeTo} className={`flex items-center ${breadcrumbClass}`}>
-            <li class="rtl:rotate-180">
+            <li className="rtl:rotate-180">
             <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4"
+            className="h-4 w-4"
             viewBox="0 0 20 20"
             fill="currentColor">
             <path

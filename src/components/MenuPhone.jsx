@@ -1,15 +1,33 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const MenuPhone = () => {
 
+
+    const {pathname} = useLocation();
+    useEffect(() => {
+    setMenuVisible(false)
+    }, [pathname]);
 
     const [menuVisible, setMenuVisible] = useState(false);
 
   const handleMenuToggle = () => {
     setMenuVisible(!menuVisible);
       
+
   };
+
+  useEffect(() => {
+    if (menuVisible) {
+      // Add the 'no-scroll' class to the body element when the menu is open
+      document.body.classList.add('no-scroll');
+    } else {
+      // Remove the 'no-scroll' class when the menu is closed
+      document.body.classList.remove('no-scroll');
+    }
+  }, [menuVisible]);
+
+  
 
   const menuItems = [
     {
@@ -47,6 +65,7 @@ const MenuPhone = () => {
 
     return (
         <>
+        
         <div className='block rounded-full p-2 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden z-30' 
         style={{
           background:'#f6f1ec'
@@ -59,7 +78,9 @@ const MenuPhone = () => {
       </button>
       </div>
       <div className={` menu ${menuVisible ? 'visible' : ''} `}>
-        <div className='menu-2'>
+      <div className='menu-2x2'></div>
+        <div className={`menu-2 ${menuVisible ? 'open' : ''}`}>
+        
           <div className='menu-3'>
              <h2 className='text-3xl'>Categoria</h2>
              
@@ -87,13 +108,7 @@ const MenuPhone = () => {
                 ))}
               </ul>
 
-              
-              
-             
-
-          </div>
-
-          <ul className=' jhoni-phone-ul'>
+              <ul className=' jhoni-phone-ul'>
           {about.map((item) => (
             <li key={item.url} className='list-none '>
               <NavLink
@@ -122,7 +137,15 @@ const MenuPhone = () => {
           </NavLink>
         </div>
           
+
+              
+             
+
+          </div>
+
           
+
+                    
         </div>
         
       </div>
