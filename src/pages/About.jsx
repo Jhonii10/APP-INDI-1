@@ -14,7 +14,7 @@ const About = () => {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <img
         alt="Laptop"
-        src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0MzYxNjh8MHwxfHNlYXJjaHw2fHxsYXB0b3N8ZW58MHx8fHwxNjg4MTU1MjQwfDA&ixlib=rb-4.0.3&q=80&w=1080"
         className="h-full w-full rounded-xl object-cover"
       />
       <div>
