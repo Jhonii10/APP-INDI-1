@@ -606,3 +606,10 @@ input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
     transition-delay: 0s;
     transition-timing-function: ease;
 }
+
+.jhoni-about-10{
+  top: -4rem;
+  position: absolute;
+  left: 12rem;
+  z-index: -1;
+}
