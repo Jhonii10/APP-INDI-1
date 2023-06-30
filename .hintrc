@@ -7,7 +7,7 @@
       "default",
       {
         "ignore": [
-          "-webkit-overflow-scrolling"
+          
         ]
       }
     ]
