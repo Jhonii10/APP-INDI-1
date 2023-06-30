@@ -551,7 +551,6 @@ input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
     height: 100%;
     z-index: 1;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
     background-color: #fff;
 }
 
@@ -619,16 +618,6 @@ input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
 
 
 /* Importación de fuentes de google fonts */ 
-
-
-.contact_form{
-  
-}
-
-.formulario
-{
-    
-}
 
 .formulario input{
 	background-color: #fbfbfb; 
