@@ -1,5 +1,6 @@
 import React from 'react'
 import Breadcrumbs from '../components/BreadCrums'
+import Error from '../components/Error'
 
 const Employees = () => {
   return (
@@ -7,6 +8,7 @@ const Employees = () => {
         
         <Breadcrumbs/>
         <h1>Employees</h1>
+        <Error/>
     </div>
   )
 }
