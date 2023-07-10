@@ -44,7 +44,7 @@ const SectionJob = () => {
                    
             </div>
 
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline mt-4" type="button">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline mt-4" type="button">
             Porque nosotros
                     </button>
                     

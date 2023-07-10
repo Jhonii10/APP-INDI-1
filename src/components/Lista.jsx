@@ -41,7 +41,7 @@ const Lista = () => {
                       onClick={''}
                     > 
                       <div className='jhoni-ul-10-div'>
-                      <img src={item.img} alt='' />
+                      <img src={item.img} alt={item.label} />
                       </div>
                       <div>
                       {item.label}
