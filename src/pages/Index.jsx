@@ -66,7 +66,7 @@ const Index = () => {
   
                    
             </div>  
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline" type="button">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline" type="button">
                     Ver todas nuestras categorias
                     </button>
         </div>

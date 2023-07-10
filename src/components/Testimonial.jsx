@@ -45,7 +45,7 @@ const Testimonial = () => {
     <div className='mt-24'>
                 <div className='jhoni-button-10'>
                 
-                <button class=" font-bold rounded-full  " type="button">
+                <button className=" font-bold rounded-full  " type="button">
                     Ver todas nuestras categorias
                     </button>
                     

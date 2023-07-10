@@ -34,7 +34,7 @@ const CustomersReviews = () => {
                 </h2>
     <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
       {
-        reviews.map(review => <div className=" p-8 ">
+        reviews.map(review => <div className=" p-8 " key={review.nombre}>
         <div className='flex items-center justify-center'>
        <img
         width={70}
