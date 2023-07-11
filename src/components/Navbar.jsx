@@ -85,13 +85,13 @@ const Navbar = () => {
         <div className=" hidden sm:flex sm:gap-4">
           <NavLink
             className="block rounded-md bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700"
-            href="/"
+            to="/empleados"
           >
             Login
           </NavLink>
           <NavLink
             className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
-            href="/"
+            to="/empleados/registro"
           >
             Register
           </NavLink>

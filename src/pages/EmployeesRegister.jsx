@@ -1,15 +1,15 @@
 import React from 'react'
 import Breadcrumbs from '../components/BreadCrums'
-import Login from '../components/Login'
+import Register from '../components/Register'
 
-const Employees = () => {
+const EmployeesRegister = () => {
   return (
     <div className='pt-24'>
         
         <Breadcrumbs/>
-        <Login/>
+        <Register/>
     </div>
   )
 }
 
-export default Employees
+export default EmployeesRegister;

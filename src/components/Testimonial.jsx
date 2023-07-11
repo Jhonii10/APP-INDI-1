@@ -1,7 +1,15 @@
 import React from 'react';
 import Card from './Card';
+import { useNavigate } from 'react-router-dom';
 
 const Testimonial = () => {
+
+    const navigate = useNavigate()
+
+    const handleVerMas = ()=>{
+        navigate('/productos')
+
+    }
 
    const products = [
     {
@@ -45,7 +53,7 @@ const Testimonial = () => {
     <div className='mt-24'>
                 <div className='jhoni-button-10'>
                 
-                <button className=" font-bold rounded-full  " type="button">
+                <button className=" font-bold rounded-full  " type="button" onClick={handleVerMas}>
                     Ver todas nuestras categorias
                     </button>
                     

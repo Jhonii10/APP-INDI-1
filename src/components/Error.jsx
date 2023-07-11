@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Error = () => {
     const [isVisible, setIsVisible] = useState(true);
+    const {user,logout}=useAuth()
 
     const navigate = useNavigate()
 
-    const hideComponent = ()=>{
+    const hideComponent = async()=>{
+        await logout(user)
         navigate(-1)
         setIsVisible(false)
     }
-
-    console.log(hideComponent)
-   
 
 
     if (!isVisible) {
