@@ -650,7 +650,7 @@ textarea{
 }
 
 
-label{
+.colocar_nombre label{
   display: block; 
 	text-align: left;
   margin-left: 12px;
@@ -674,4 +674,59 @@ label{
 .formulario textarea:focus{
 	outline:0;
 	border: 1px solid #97d848;
+}
+
+/*-------------------------------*/
+
+.form-control {
+  position: relative;
+  margin: 20px 0 30px;
+  }
+
+.form-control input {
+  
+  display: block;
+  width: 95%;
+  padding: 12px;
+  color: #c6c6c6;
+
+  background-color: #fbfbfb; 
+	border-radius: 6px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #d1d1d1;
+ 
+  height: 30px;
+  font-size: 16px;
+  padding: 6px;
+  margin: 6px;
+}
+
+
+
+
+
+.form-control label {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  color: #cdcdcd;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 16px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+  color: #797979;
+  transform: translateY(-30px);
+}
+
+.grid{
+  place-content: center;
 }
