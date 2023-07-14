@@ -90,7 +90,7 @@ const Contact = () => {
       <div>
       <div className="contact_form">
   <div className="formulario">
-    <form action="submeter-formulario.php" method="post">
+    <form action="submeter-formulario.php" method="post" className='colocar_nombre'>
       
         <label htmlFor="nombre" className="colocar_nombre">
           Nombre

@@ -6,6 +6,7 @@
   import EmployeesRegister from '../pages/EmployeesRegister';
   import Home from '../pages/Home';
 import { ProtectedRoute } from './PrivateRoutes';
+import ProductosSecren from '../pages/ProductosSecren';
 
   const Products = lazy(() => import('../pages/Products'));
   const Locations = lazy(() => import('../pages/Locations'));
@@ -49,6 +50,7 @@ import { ProtectedRoute } from './PrivateRoutes';
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/productos" element={<Products />} />
+                <Route path='/productos/:categoryId' element={<ProductosSecren/>}/>
                 <Route path="/ubicaciones" element={<Locations />} />
                 <Route path="/empleados" element={<Employees />} />
                 <Route path="/empleados/registro" element={<EmployeesRegister />} />
