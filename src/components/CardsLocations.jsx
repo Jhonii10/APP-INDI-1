@@ -3,6 +3,8 @@ import CardLocation from './CardLocation';
 import { locations } from '../models/locations.js';
 
 const CardsLocations = () => {
+
+    console.log({locations})
     
     return (
         <div>

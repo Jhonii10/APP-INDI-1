@@ -8,7 +8,7 @@ const Card = ({categoria,nombre,id}) => {
     return (
         <div className="rounded-lg bg-gray-100 p-8">
             <NavLink
-  to={'#'}
+  to={`/productos/${categoria}`}
   className="jhoni-card "
 >
   <div className="">

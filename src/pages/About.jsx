@@ -2,6 +2,7 @@ import React from 'react';
 import Breadcrumbs from '../components/BreadCrums';
 import CustomersReviews from '../components/CustomersReviews';
 import Footer from '../components/Footer';
+import Ganancias from '../components/Ganancias';
 
 const About = () => {
     return (
@@ -175,10 +176,7 @@ const About = () => {
     <hr className='mt-16'/>
 
     <div className='mt-16'>
-        <h2 className=' text-3xl font-medium mt-12'>Altos márgenes de beneficio
-para los minoristas</h2>
-        <p  className='mt-4'>Nuestros precios competitivos para clientes minoristas y el alto valor percibido de nuestros productos por parte de los consumidores finales permiten a los minoristas disfrutar de altos márgenes de beneficio.</p>
-    
+        <Ganancias/>
     </div>
     </div>
     </div>

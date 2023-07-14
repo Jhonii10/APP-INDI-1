@@ -52,6 +52,7 @@ const Jobs = () => {
       accept=".pdf"
       aria-required="true"
       aria-invalid="false"
+      required
     />
   </span>
 
