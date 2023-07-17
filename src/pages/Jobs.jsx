@@ -21,6 +21,7 @@ const Jobs = () => {
           }, []);
         
           return (
+             
               <form ref={formRef} className=''>
                 <div className="form-control  ">
                   <input type="text" required />
@@ -71,7 +72,7 @@ const Jobs = () => {
 
 
     return (
-        <div className='pt-24'>
+        <div className='pt-28'>
         <Breadcrumbs/>
 
         <div className='pt-16 flex items-center justify-center '>

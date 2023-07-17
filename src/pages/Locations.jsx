@@ -7,7 +7,7 @@ const Locations = () => {
 
 
     return (
-        <div className='pt-24'>
+        <div className='pt-28'>
             
             <Breadcrumbs/>
             <h1 className='mt-8 text-3xl font-bold'>Puntos de venta minoristas y mayoristas</h1>

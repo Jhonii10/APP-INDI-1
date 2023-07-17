@@ -6,8 +6,7 @@ import Footer from '../components/Footer';
 
 const Products = () => {
     return (
-        <div className='pt-24 '>
-            
+        <div className='pt-28 '>
             <Breadcrumbs/>
             <h2 className='mt-8 text-3xl font-bold'>Conoce mas sobre nuestros produtos por su categorias</h2>
             <ListCard/>

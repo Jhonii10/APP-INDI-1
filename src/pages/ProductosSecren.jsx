@@ -21,7 +21,7 @@ const ProductosSecren = () => {
 
 
     return (
-        <div className='' style={{paddingTop:'7rem'}}>
+        <div className='pt-28'>
             <Breadcrumbs/>
             <section className='styles_template_product_screen__tkOFy'>
             <div className='styles_screen__2YYOb'>

@@ -1,5 +1,7 @@
 import React from 'react';
 import RedesSociales from './RedesSociales';
+import menuItems from '../models/menuItems';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -31,38 +33,16 @@ const Footer = () => {
           <div className="text-center sm:text-left">
             <p className="text-lg font-medium text-gray-900">Recursos</p>
             <ul className="mt-8 space-y-4 text-sm">
-              <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
-                >
-                  Productos
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
-                >
-                  Ubicaciones
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
-                >
-                  Empleados
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
-                >
-                  Trabaja con nosotros
-                </a>
-              </li>
+            {
+              menuItems.map(menuItem => 
+                <li key={menuItem.label}>
+                <Link className="text-gray-700 transition hover:text-gray-700/75" to={menuItem.url}>
+                      {menuItem.label}
+                </Link>
+
+                </li>
+              )
+            }
             </ul>
           </div>
           
