@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 const BotonPM = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-  console.log(error)
 
+  console.log(error)
   const handleInputChange = (e) => {
     setEmail(e.target.value);
      
@@ -14,7 +14,7 @@ const BotonPM = () => {
     e.preventDefault();
     
     // Validar el correo electrónico
-    if (!email) {
+    if (!email ) {
       setError('Ingrese su correo electrónico');
       return;
     }
@@ -31,6 +31,7 @@ const BotonPM = () => {
           subject: 'Solicitud de precios mayoristas',
           message: 'Mensaje adicional o contenido del formulario'
         })
+        
       });
 
       if (response.ok) {
@@ -42,7 +43,6 @@ const BotonPM = () => {
         //alert('Error al enviar el correo');
       }
     } catch (error) {
-      console.error('Error al enviar el correo:', error);
       //alert('Error al enviar el correo');
     }
   };

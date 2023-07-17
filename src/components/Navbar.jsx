@@ -61,7 +61,7 @@ const Navbar = () => {
             {isDropdownOpen && (
 
               <div className='right-0 dropdown-menu '
-              onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}>  
               <Lista/>
               </div>

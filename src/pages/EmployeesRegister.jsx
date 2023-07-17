@@ -4,7 +4,7 @@ import Register from '../components/Register'
 
 const EmployeesRegister = () => {
   return (
-    <div className='pt-24'>
+    <div className='pt-28'>
         
         <Breadcrumbs/>
         <Register/>
