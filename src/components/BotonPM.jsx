@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 const BotonPM = () => {
   const [email, setEmail] = useState('');
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState('');
 
-  console.log(error)
   const handleInputChange = (e) => {
-    setEmail(e.target.value);
+    setEmail(e.target.value); 
      
   };
 
