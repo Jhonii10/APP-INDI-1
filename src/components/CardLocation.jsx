@@ -2,6 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const CardLocation = ({img,tienda,direcion,horarios,ubicacion}) => {
+
+    const path = `/ubicaciones/${tienda}`
+     
     return (
         <div>
             
@@ -26,13 +29,13 @@ const CardLocation = ({img,tienda,direcion,horarios,ubicacion}) => {
         <div className="mt-6 sm:text-right gap-2 flex justify-center">
 
         <NavLink
-            href={ubicacion}
+            to={path}
             className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
           >
             Mas detalles 
           </NavLink>
           <NavLink
-            href={ubicacion}
+            to={ubicacion}
             className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
           >
             Ver mapa  

@@ -3,9 +3,7 @@ import CardLocation from './CardLocation';
 import { locations } from '../models/locations.js';
 
 const CardsLocations = () => {
-
-    console.log({locations})
-    
+       
     return (
         <div>
         <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6  ">

@@ -4,8 +4,6 @@ import { category } from '../models/category.js';
 
 const ListCard = () => {
     
-    console.log({category})
-
         return (
             <div>
                 <section className="bg-white">

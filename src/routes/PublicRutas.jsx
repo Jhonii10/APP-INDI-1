@@ -5,9 +5,10 @@
   import Index from '../pages/Index';
   import EmployeesRegister from '../pages/EmployeesRegister';
   import Home from '../pages/Home';
-import { ProtectedRoute } from './PrivateRoutes';
-import ProductosSecren from '../pages/ProductosSecren';
-import Rewies from '../pages/Rewies';
+  import { ProtectedRoute } from './PrivateRoutes';
+  import ProductosSecren from '../pages/ProductosSecren';
+  import Rewies from '../pages/Rewies';
+  import LocationsSecren from '../pages/LocationsSecren';
 
   const Products = lazy(() => import('../pages/Products'));
   const Locations = lazy(() => import('../pages/Locations'));
@@ -53,6 +54,7 @@ import Rewies from '../pages/Rewies';
                 <Route path="/productos" element={<Products />} />
                 <Route path='/productos/:categoryId' element={<ProductosSecren/>}/>
                 <Route path="/ubicaciones" element={<Locations />} />
+                <Route path="/ubicaciones/:locationId" element={<LocationsSecren/>} />
                 <Route path="/empleados" element={<Employees />} />
                 <Route path="/empleados/registro" element={<EmployeesRegister />} />
                 <Route path="/home" element={<ProtectedRoute><Home/></ProtectedRoute> } />
