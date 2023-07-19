@@ -964,7 +964,7 @@ textarea{
     overflow: hidden;
     border-radius: 1.875rem 1.875rem 0 0;
     padding-bottom: 1.875rem;
-    border: 1px solid transparent; 
+    border: 1px solid rgb(225, 225, 225); 
     transition: border-color .35s,background-color .35s;
     transition-delay: 0s;
     transition-timing-function: ease;

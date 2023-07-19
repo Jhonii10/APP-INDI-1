@@ -11,7 +11,7 @@ const BotonPM = () => {
         setError(false)
     }else{
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      setError(emailPattern.test(e.target.value.trim()));
+      setError(!emailPattern.test(e.target.value.trim()));
     }
     
   };
@@ -65,8 +65,8 @@ const BotonPM = () => {
             name="email"
             placeholder="name@gmail.com"
             value={email}
-            onChange={handleInputChange}
-            className={`${ error && 'bg-red-100'}`}
+            onChange={handleInputChange}  
+            className={`${ error ? 'sm:bg-red-100 sm:border sm:border-red-300 bg-transparent' :'sm:border '}`}
           />
         </div>
         <button type="submit" className="styles_form__submit__0cyqe">
