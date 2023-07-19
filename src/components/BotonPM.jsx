@@ -24,14 +24,13 @@ const BotonPM = () => {
     
     // Validar el correo electrónico
     if (!email) {
-      console.log('correo no valido')
       setError(true);
       return;
     }
 
     // Enviar el correo electrónico
     try {
-      if (error === false) {
+      if (error === false && email!=='') {
         const response = await fetch('https://formsubmit.co/jhonieripianoscue@gmail.com', {
         method: 'POST',
         headers: {
