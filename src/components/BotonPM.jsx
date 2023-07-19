@@ -2,20 +2,27 @@ import React, { useState } from 'react';
 
 const BotonPM = () => {
   const [email, setEmail] = useState('');
-  // eslint-disable-next-line no-unused-vars
-  const [error, setError] = useState('');
+  const [error, setError] = useState(false);
+  const [showform, setshowform] = useState(false);
 
   const handleInputChange = (e) => {
-    setEmail(e.target.value); 
-     
+    setEmail(e.target.value.trim());
+    if (e.target.value.trim() === '' ) {
+        setError(false)
+    }else{
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      setError(emailPattern.test(e.target.value.trim()));
+    }
+    
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+    
     // Validar el correo electrónico
-    if (!email ) {
-      setError('Ingrese su correo electrónico');
+    if (!email) {
+      setError(true);
       return;
     }
 
@@ -37,33 +44,46 @@ const BotonPM = () => {
       if (response.ok) {
         // Envío exitoso
         setEmail('');
-        setError('');
+        setError(false);
+        setshowform(true)
       } else {
-        // Error en el envío
-        //alert('Error al enviar el correo');
+        setError(true)
       }
     } catch (error) {
-      //alert('Error al enviar el correo');
     }
   };
 
+
   return (
     <>
+    {
+      !showform  &&
       <form onSubmit={handleSubmit} className="styles_form__tbsfD">
-        <div className={`styles_form__input__6IeAH ${!email && 'border-red-500'}`}>
+        <div className={`styles_form__input__6IeAH ${ error && 'styles_is_invalid__otroi'  }`}>
           <input
             type="email"
             name="email"
             placeholder="name@gmail.com"
             value={email}
             onChange={handleInputChange}
-            className={`border ${!email && 'border-red-500'}`}
+            className={`${ error && 'bg-red-100'}`}
           />
         </div>
         <button type="submit" className="styles_form__submit__0cyqe">
           <span>Solicitar Precios Mayoristas</span>
         </button>
       </form>
+    }{
+      showform && 
+      <div className=" bg-gray-200 p-4 rounded-3xl">
+        
+           <div className="font-bold">Gracias</div>
+           <div>
+           Hemos recibido su solicitud y comenzaremos a procesarla en breve.
+           </div>
+    
+      </div>
+    }
     </>
   );
 };
