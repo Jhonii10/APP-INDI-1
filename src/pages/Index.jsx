@@ -6,6 +6,7 @@ import CustomersReviews from '../components/CustomersReviews';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import BotonPM from '../components/BotonPM';
+import SliderShow from '../components/SliderShow';
 
 const Index = () => {
    
@@ -25,11 +26,10 @@ const Index = () => {
           <div className=" mx-auto min-1200 px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 ">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  w-full">
                 <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
-                <img
-                 alt="Party"
-                 src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                 className="absolute inset-0 h-full w-full object-cover "
-                />
+                <div
+                 className="absolute inset-0 h-full w-full object-cover"
+                ><SliderShow/>
+                </div>
                  </div> 
                 <div className=" max-w-lg lg:text-left">
                     <h1 className=" font-bold md:text-3xl lg:text-5xl ">
