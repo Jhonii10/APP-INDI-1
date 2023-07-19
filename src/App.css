@@ -13,16 +13,6 @@
 }
 
 
-  
-.slider {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
- 
-
-
-
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -71,9 +61,7 @@
 }
 
 .slides img{
-
-  width: 100%;
-  height: auto;
+  object-fit: cover;
 }
 
 .buttons button{
@@ -90,7 +78,7 @@
 }
 
 .buttons button:hover{
-  opacity: 1p;
+  opacity: 1px;
 }
 
 

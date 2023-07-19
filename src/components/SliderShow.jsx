@@ -6,10 +6,10 @@ const SliderShow = () => {
 
 
     const images = [
-        <div className="slide"><img alt='1' src='/assets/1.png'></img></div>,
-        <div className="slide"><img alt='2' src='/assets/2.png'></img></div>,
-        <div className="slide"><img alt='3' src='/assets/3.png'></img></div>,
-        <div className="slide"><img alt='4' src='/assets/4.png'></img></div>
+        <div className=""><img alt='1' className='w-full h-full inset-0 absolute' src='/assets/1.png'></img></div>,
+        <div className=""><img alt='2' className='w-full h-full inset-0 absolute' src='/assets/2.png'></img></div>,
+        <div className=""><img alt='3' className='w-full h-full inset-0 absolute'  src='/assets/3.png'></img></div>,
+        <div className=""><img alt='4' className='w-full h-full inset-0 absolute' src='/assets/4.png'></img></div>
     ]
 
     const nextImage = ( )=>{
@@ -42,7 +42,7 @@ const SliderShow = () => {
 
     return (
         <>
-        <div className="slider h-auto w-full" >
+        <div className="slider h-auto w-full " >
       {/* Mostrar la diapositiva actual */}
       <div className="slides">{images[currentImage]}</div>
 
