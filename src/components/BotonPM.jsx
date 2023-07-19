@@ -10,11 +10,13 @@ const BotonPM = () => {
     if (e.target.value.trim() === '' ) {
         setError(false)
     }else{
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailPattern = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
       setError(!emailPattern.test(e.target.value.trim()));
+     
     }
     
   };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,13 +24,15 @@ const BotonPM = () => {
     
     // Validar el correo electrónico
     if (!email) {
+      console.log('correo no valido')
       setError(true);
       return;
     }
 
     // Enviar el correo electrónico
     try {
-      const response = await fetch('https://formsubmit.co/jhonieripianoscue@gmail.com', {
+      if (error === false) {
+        const response = await fetch('https://formsubmit.co/jhonieripianoscue@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -40,7 +44,6 @@ const BotonPM = () => {
         })
         
       });
-
       if (response.ok) {
         // Envío exitoso
         setEmail('');
@@ -49,7 +52,10 @@ const BotonPM = () => {
       } else {
         setError(true)
       }
+        
+      }    
     } catch (error) {
+      console.error(error)
     }
   };
 
@@ -67,6 +73,8 @@ const BotonPM = () => {
             value={email}
             onChange={handleInputChange}  
             className={`${ error ? 'sm:bg-red-100 sm:border sm:border-red-300 bg-transparent' :'sm:border '}`}
+            autoComplete='off'
+
           />
         </div>
         <button type="submit" className="styles_form__submit__0cyqe">
