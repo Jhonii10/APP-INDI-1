@@ -964,7 +964,7 @@ textarea{
     overflow: hidden;
     border-radius: 1.875rem 1.875rem 0 0;
     padding-bottom: 1.875rem;
-    border: 1px solid transparent;
+    border: 1px solid transparent; 
     transition: border-color .35s,background-color .35s;
     transition-delay: 0s;
     transition-timing-function: ease;
@@ -984,8 +984,7 @@ textarea{
     padding-left: 3.375rem !important;
     padding-right: 10% !important;
     border-radius: 1.25rem 0 0 1.25rem;
-    background-color: #fff !important;
-    border: 1px solid #d6d6d6 !important;
+   
 }}
 
 .styles_form__input__6IeAH {
@@ -993,6 +992,12 @@ textarea{
   width: 100%;
 }
 
+
+@media (max-width: 899px){
+.styles_form__input__6IeAH.styles_is_invalid__otroi {
+    background-color: #f1e0e0 !important;
+    border-color:#ea4c4a !important;}
+}
 
 
 .styles_form__input__6IeAH:before {
@@ -1030,9 +1035,7 @@ textarea{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: transparent;
   padding: 0;
-  border: 0;
   cursor: pointer;
   cursor: default;
   display: block;
