@@ -17,8 +17,6 @@ const Index = () => {
     }
 
 
-
-
     return (
         <>
         <div className='j-10-10 lg:h-screen '>
