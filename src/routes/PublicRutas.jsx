@@ -9,6 +9,7 @@
   import ProductosSecren from '../pages/ProductosSecren';
   import Rewies from '../pages/Rewies';
   import LocationsSecren from '../pages/LocationsSecren';
+  import LoadingSpinner from '../components/LoadingSpinner';
 
   const Products = lazy(() => import('../pages/Products'));
   const Locations = lazy(() => import('../pages/Locations'));
@@ -44,7 +45,7 @@
     return (
       <div className="App">
         <>
-            <Suspense fallback={  <div className="spinner-container"><div className="spinner"></div></div>}>
+            <Suspense fallback={  <div className="spinner-container"><LoadingSpinner/> </div>}>
               {
                 showNavbar && <Navbar/>
               }
