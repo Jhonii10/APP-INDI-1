@@ -2,6 +2,7 @@ import React, {  useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Lista from './Lista';
 import MenuPhone from './MenuPhone';
+import { motion } from 'framer-motion';
 
 
 const Navbar = () => {
@@ -24,7 +25,9 @@ const Navbar = () => {
 
 
     return (
-      <header className="absolute z-9 top-0 left-0 w-full h-28 flex flex-row items-center justify-between bg-transparent z-10 ">
+      <motion.header initial={{ opacity: 0 }}
+      animate={{ opacity: 1}}
+      transition={{ duration: 2}}  className="absolute z-9 top-0 left-0 w-full h-28 flex flex-row items-center justify-between bg-transparent z-10 ">
          <div className="w-full flex h-28  items-center gap-20 px-8 sm:px-6 lg:px-20">
           <NavLink className="block text-teal-600" to ="/">
             <span className="sr-only">Home</span>
@@ -43,7 +46,7 @@ const Navbar = () => {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <span className="mr-1 text-md">Recursos</span>
+              <span className="mr-1 text-sm lg:text-base md:mr-0">Recursos</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 fill-current text-gray-600"
@@ -69,7 +72,7 @@ const Navbar = () => {
           
 
           {about.map((item) => (
-            <li key={item.url} className='list-none grid place-content-center text-md'>
+            <li key={item.url} className='list-none grid place-content-center  text-sm lg:text-base'>
               <NavLink
                 className="text-gray-600 hover:text-black-500"
                 to={item.url}
@@ -104,7 +107,7 @@ const Navbar = () => {
       </div>
     </div>
   </div>
-</header>
+</motion.header>
 
         
     );

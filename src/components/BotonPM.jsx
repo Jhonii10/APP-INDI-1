@@ -92,7 +92,7 @@ const BotonPM = () => {
               placeholder='name@gmail.com'
               value={email}
               onChange={handleInputChange}
-              className={`${error ? 'sm:bg-red-100 sm:border sm:border-red-300 bg-transparent' : 'sm:border '}`}
+              className={`${error ? 'sm:bg-red-100 lg:border lg:border-red-300 bg-transparent' : 'lg:border'}`}
               autoComplete='off'
             />
           </div>

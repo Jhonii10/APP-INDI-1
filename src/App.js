@@ -5,6 +5,7 @@ import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter } from 'react-router-dom';
 import LoadingSpinner from './components/LoadingSpinner';
 
+
 function App() {
   
   const [loading, setloading] = useState(true);
