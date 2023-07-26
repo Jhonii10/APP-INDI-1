@@ -43,7 +43,6 @@
         
     
     return (
-      <div className="App">
         <>
             <Suspense fallback={  <div className="spinner-container"><LoadingSpinner/> </div>}>
               {
@@ -68,7 +67,6 @@
             </Suspense>
       
         </>
-      </div>
     );
   };
 

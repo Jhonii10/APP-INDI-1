@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import BotonPM from '../components/BotonPM';
 import SliderShow from '../components/SliderShow';
+import { motion } from 'framer-motion';
 
 const Index = () => {
    
@@ -19,17 +20,19 @@ const Index = () => {
 
     return (
         <>
-        <div className='j-10-10 lg:h-screen '>
+        <motion.div initial={{ opacity: 0, y:150}}
+      animate={{ opacity: 1 , y:0}}
+      transition={{ duration: 1.5}}  className='j-10-10 lg:h-screen '>
              
           <div className=" mx-auto min-1200 px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 ">
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  w-full">
+                <div className=" grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  w-full h-full place-content-center ">
                 <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
                 <div
                  className="absolute inset-0 h-full w-full object-cover"
                 ><SliderShow/>
                 </div>
                  </div> 
-                <div className=" max-w-lg lg:text-left">
+                <div className=" lg:max-w-lg lg:text-left ">
                     <h1 className=" font-bold md:text-3xl lg:text-5xl ">
                         Organic Wooden Toys 
                         <br />
@@ -72,7 +75,7 @@ const Index = () => {
     </div>
     </div>
 
-        </div>
+        </motion.div>
     
         <div className='px-4 lg:px-16' >
             <div className='mt-12'ref={ref}>

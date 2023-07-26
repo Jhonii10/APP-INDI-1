@@ -17,7 +17,7 @@ const SectionJob = () => {
                     <div className='jhoni-secction-job '>
                         <h3 className='jhoni-font mt-4'>Interesado en trabajar con nosotros?</h3>
                         <div className='mt-4'>Por favor, haga clic en el botón de abajo.</div>
-                        <div className="max-w-lg mx-auto mt-4">
+                        <div className="w-full max-w-xl mx-auto mt-4 p-4 ">
                         <BotonPM/>
                         </div>
 
