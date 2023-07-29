@@ -518,8 +518,7 @@ input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
 .visible {
   opacity: 1;
   visibility: visible;
-  overflow-x: auto; /* Scroll horizontal solo cuando sea necesario */
-  overflow-y: scroll; 
+  overflow: auto; 
 
 }
 
