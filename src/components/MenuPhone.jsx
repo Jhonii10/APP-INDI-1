@@ -77,7 +77,7 @@ const MenuPhone = () => {
         <div className="line"></div>
       </button>
       </div>
-      <div className={` menu ${menuVisible ? 'visible' : ''} `}>
+      <div className={` menu md:hidden ${menuVisible ? 'visible' : ''} `}>
       <div className='menu-2x2'></div>
         <div className={`menu-2 ${menuVisible ? 'open' : ''}`}>
         
