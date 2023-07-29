@@ -518,8 +518,7 @@ input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
 .visible {
   opacity: 1;
   visibility: visible; 
-  overflow: auto;
-  
+
 }
 
 .menu-2x2{
