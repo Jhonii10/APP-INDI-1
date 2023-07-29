@@ -1,6 +1,6 @@
   import React, { Suspense, useEffect, useState } from 'react';
   import { lazy } from 'react';
-  import {Route, Routes, useLocation } from 'react-router-dom';
+  import {Navigate, Route, Routes, useLocation } from 'react-router-dom';
   import Navbar from '../components/Navbar';
   import Index from '../pages/Index';
   import EmployeesRegister from '../pages/EmployeesRegister';
@@ -62,6 +62,7 @@
                 <Route path="/contactanos" element={<Contact />} />
                 <Route path="/Porque-Nosotros" element={<About />} />
                 <Route path='/Reviews' element={<Rewies/>}/>
+                <Route path='/*' element={<Navigate to='/'/>}/>
                 
               </Routes>
             </Suspense>
