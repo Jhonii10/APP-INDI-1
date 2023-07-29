@@ -518,7 +518,8 @@ input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
 .visible {
   opacity: 1;
   visibility: visible;
-  overflow-y: auto; 
+  overflow-x: hidden; /* Bloquear desplazamiento horizontal */
+  overflow-y: scroll;
 
 }
 
