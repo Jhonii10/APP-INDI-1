@@ -1,8 +1,7 @@
-import React, {  useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Lista from './Lista';
 import MenuPhone from './MenuPhone';
-import { motion } from 'framer-motion';
 
 
 const Navbar = () => {
@@ -21,13 +20,38 @@ const Navbar = () => {
       ];
     
       const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+      const [isFixed, setIsFixed] = useState(false);
     
 
+      useEffect(() => {
+        let prevScrollY = window.scrollY;
+      
+        const handleScroll = () => {
+          const currentScrollY = window.scrollY;
+          setIsFixed(prevScrollY >= currentScrollY && prevScrollY >= window.screen.height/2);
+          prevScrollY = currentScrollY;
+          
+        };
+      
+        window.addEventListener("scroll", handleScroll);
+        
+      
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
 
     return (
-      <motion.header initial={{ opacity: 0 }}
-      animate={{ opacity: 1}}
-      transition={{ duration: 2}}  className="absolute z-9 top-0 left-0 w-full h-28 flex flex-row items-center justify-between bg-transparent z-10 ">
+      <header 
+    
+
+      
+      className={`z-9 left-0 w-full h-28 flex flex-row items-center justify-between bg-transparent z-10 ${
+        isFixed ? 'fixed-10 ' : 'absolute'
+      }
+      
+      `}  
+
+
+    >
          <div className="w-full flex h-28  items-center gap-20 px-8 sm:px-6 lg:px-20">
           <NavLink className="block text-teal-600" to ="/">
             <span className="sr-only">Home</span>
@@ -107,7 +131,7 @@ const Navbar = () => {
       </div>
     </div>
   </div>
-</motion.header>
+</header>
 
         
     );

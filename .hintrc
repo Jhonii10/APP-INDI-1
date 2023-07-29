@@ -7,7 +7,7 @@
       "default",
       {
         "ignore": [
-          
+          "backdrop-filter"
         ]
       }
     ]
