@@ -44,7 +44,7 @@ const Navbar = () => {
     
 
       
-      className={`z-9 left-0 w-full h-28 flex flex-row items-center justify-between bg-transparent z-10 ${
+      className={`z-10 top-0 left-0 w-full h-28 flex flex-row items-center justify-between bg-transparent  ${
         isFixed ? 'fixed-10 ' : 'absolute'
       }
       
