@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Alert from '../components/Alert';
+import '../style/auth.css'
 
 
 const Register = () => {
@@ -40,89 +41,94 @@ const Register = () => {
             else{
                 setError(error.message)
             }
+
+            setTimeout(() => {
+              return setError('');
+          }, 3000);
             
         }
 
 
         
     }
+    const [inicio, setInicio] = useState(false);
 
 
 
     return (
-        <div className='w-full max-w-xs m-auto grid place-content-center mt-12 '>
-        <div className='mb-2'>
+        <div className='auth-container'>
+        <div className='mb-2 alert-10'>
         {
             
             error && <Alert  massage={error}/>
         }</div>
-        
-            <form onSubmit={handleSubmit} className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
-                
-               <div className='mb-4'>
-                <label htmlFor='email'>Name</label>
-                <input 
-                 type='text'
-                 name='username'
-                 placeholder='User Name'
-                 className='shadow appearance-none border rounded
-                 w-full py-2 px-3 text-grey-700 leading-tight
-                 focus:outline-none focus:shadow.outline'
-                 onChange={handleChange}
-                 autoComplete='off'
-                 />
-                 </div>
 
+        <div className={`card-3d-wrap mx-auto ${inicio ? 'clicked':''   }`}>
+  <div className="card-3d-wrapper">
+    <div className="card-front">
+      <div className="center-wrap">
+      <form onSubmit={handleSubmit}>
 
-                <div className='mb-4'>
-                <label htmlFor='email'>Email</label>
-                <input 
-                 type='text'
-                 name='email'
-                 placeholder='example@gmail.com'
-                 className='shadow appearance-none border rounded
-                 w-full py-2 px-3 text-grey-700 leading-tight
-                 focus:outline-none focus:shadow.outline'
-                 onChange={handleChange}
-                 autoComplete='off'
-                 />
-                 </div>
-
-                 <div className='mb-4'>
-                <label htmlFor='password'>Password</label>
-                <input 
-                 type='password'
-                 name='password'
-                 id='password'
-                 placeholder='******'
-                 className='shadow appearance-none border rounded
-                 w-full py-2 px-3 text-grey-700 leading-tight
-                 focus:outline-none focus:shadow.outline'
-                 onChange={handleChange}
-                 />
-                 </div>
-
-                 <div className='mb-4'>
-                <label htmlFor='password'>Password Confirmation</label>
-                <input 
-                 type='password'
-                 name='password2'
-                 id='password2'
-                 placeholder='******'
-                 className='shadow appearance-none border rounded
-                 w-full py-2 px-3 text-grey-700 leading-tight
-                 focus:outline-none focus:shadow.outline'
-                 onChange={handleChange}
-                 />
-                 </div>
-
-                 <button className='bg-blue-500 hover:bg-blue-600
-                 text-white font-bold py-2 px-4 rounded
-                 focus:outline-none focus:shadow-outline text-sm'>register</button>
-
-            </form>
-            <span className='my-4 text-sm flex justify-between px-3'>You already have an account<Link to='/empleados'>login</Link></span>
+      <div className="section text-center">
+        <h4 className="mb-4 pb-3">Sign Up</h4>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          name='username'
+                          className="form-style"
+                          placeholder="Name"
+                          autoComplete="off"
+                          onChange={handleChange}
+                        />
+                        <i className=" input-icon fa-solid fa-user"></i>
+                      </div>
+                      <div className="form-group mt-2">
+                        <input
+                          type="email"
+                          name="email"
+                          className="form-style"
+                          placeholder="Your Email"
+                          autoComplete="off"
+                          onChange={handleChange}
+                        />
+                        <i className=" input-icon fa-solid fa-at"></i>
+                      </div>
+                      <div className="form-group mt-2">
+                        <input
+                          type="password"
+                          name="password"
+                          className="form-style"
+                          placeholder="Your Password"
+                          onChange={handleChange}
+                        />
+                         <i class="input-icon fa-solid fa-lock"  ></i>
+                      </div>
+                      <div className="form-group mt-2">
+                        <input
+                          type="password2"
+                          name="password2"
+                          className="form-style"
+                          placeholder="Confirm Password"
+                          onChange={handleChange}
+                        />
+                         <i class="input-icon fa-solid fa-lock"  ></i>
+                      </div>
+                      <input type='submit' className="btn mt-4" value='Register'/>
+                       
         </div>
+        </form>
+      </div>
+    </div>
+    
+    
+  </div>
+       
+</div>
+ <span className='my-4 text-sm flex justify-between px-3'>You already have an account<Link to='/empleados' onClick={()=>{setInicio(true)}}>login</Link></span>
+        
+        
+           
+           </div>
     );
 }
 

@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Alert from '../components/Alert';
-import Error from './Error';
+import '../style/auth.css'
 
 
 const Login = () => {
 
     const navigate = useNavigate();
     const [error, setError] = useState();
-    const [nodisponible, setnodisponible] = useState(false);
 
     const [user, setUser] = useState({
         email:'',
@@ -36,6 +35,10 @@ const Login = () => {
             else{
                 setError(error.message)
             }
+
+            setTimeout(() => {
+                return setError('');
+            }, 3000);
             
         }
 
@@ -43,12 +46,10 @@ const Login = () => {
         
     }
 
+    
 
-    const handleLoginGoogle = async () => {
-          await setnodisponible(true) //loginWithGoogle(); 
-          //navigate('/')
-        
-      };
+
+  
 
     const handleResetPassword = async()=>{
         if (!user.email) {
@@ -64,77 +65,80 @@ const Login = () => {
         
     }
 
+    const [inicio, setInicio] = useState(false);
+
+    const handleLogin = ()=>{
+        setInicio(true)
+    }
+
 
 
     return (
-        <div className='w-full max-w-xs m-auto grid place-content-center mt-16 '>
-        <div className='mb-2'>
+        <div className='auth-container' >
+        <div className='mt-b alert-10'>
         {
             
             error && <Alert massage={error}/>
         }
-        {
-            nodisponible && <Error/>
-        }
+        
         
         
         </div>
+
+        <div className={`card-3d-wrap mx-auto ${inicio ? 'clicked':''   }`}>
+  <div className="card-3d-wrapper ">
+    <div className="card-front">
+      <div className="center-wrap">
+        <div className="section text-center">
+        <form onSubmit={handleSubmit}>
+        <h4 className="mb-4 pb-3">Log In</h4>
+                      <div className="form-group ">
+                        <input
+                          type="email"
+                          name="email"
+                          className="form-style"
+                          placeholder="example@gmail.com"
+                          onChange={handleChange}
+                        />
+                        <i className=" input-icon fa-solid fa-at"></i>
+                      </div>
+                      <div className="form-group mt-2">
+                        <input
+                          type="password"
+                          name="password"
+                          className="form-style"
+                          placeholder="Your Password"
+                          onChange={handleChange}
+                          autoComplete="off"
+                        />
+                        <i className="input-icon fa-solid fa-lock"  ></i>
+                      </div>
+
+                        <div >
+                      <input type='submit' className="btn mt-4" value='submit'/>
+                      <p className="mb-0 mt-4 text-center">
+                        <button onClick={handleResetPassword} className="link">
+                          Forgot your password?
+                        </button>
+                      </p>
+                      </div>
+
+         
+                      </form>
+                      
+        </div>
         
-            <form onSubmit={handleSubmit} className='bg-white shadow-xl rounded px-8 pt-6 pb-8 mb-4'>
-                
-                <div className='mb-4'>
-                <label htmlFor='email' className='block text-grey-700 text-sm font-fold mb-2 '>Email</label>
-                <input 
-                 type='text'
-                 name='email'
-                 placeholder='example@gmail.com'
-                 className='shadow appearance-none border rounded
-                 w-full py-2 px-3 text-grey-700 leading-tight
-                 focus:outline-none focus:shadow.outline' 
-                 onChange={handleChange}
-                 />
-                 </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  
+</div><span className='mt-4 text-sm flex justify-between px-3'>Don't have an Account<Link to='/empleados/registro' onClick={handleLogin}>Register</Link></span>
+  
 
-                <div className='mb-4'>
-                <label htmlFor='password' className='block text-grey-700 text-sm font-fold mb-2 '>Password</label>
-                <input 
-                 type='password'
-                 name='password'
-                 id='password'
-                 placeholder='******'
-                 className='shadow appearance-none border rounded
-                 w-full py-2 px-3 text-grey-700 leading-tight
-                 focus:outline-none focus:shadow.outline'
-                 onChange={handleChange}
-                 />
-                 </div>
-
-                 <div className='flex items-center justify-between'>
-                 <button 
-                 className='bg-blue-500 hover:bg-blue-600
-                 text-white font-bold py-2 px-4 rounded
-                 focus:outline-none focus:shadow-outline text-sm'>login</button>
-
-                 
-
-                 <a href='#!' className='inline-block align.baseline font-bold
-                 text-sm text-blue-500 hover:text-blue-800'
-                 onClick={handleResetPassword}
-                 >Forgot password</a>
-
-                 </div>
-
-                 
-
-            </form>
-
-            <span className='my-4 text-sm flex justify-between px-3'>Don't have an Account<Link to='/empleados/registro'>Register</Link></span>
-
-            <button 
-             onClick={handleLoginGoogle}
-             className='bg-slate-50 hover:bg-slate-200 text-black
-             shadow-md round border-2 border-gray-300 py-2 px-4 w-full'
-             >Google login</button>
+      
         </div>
     );
 }
