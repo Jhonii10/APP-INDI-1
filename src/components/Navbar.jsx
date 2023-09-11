@@ -28,10 +28,12 @@ const Navbar = () => {
       
         const handleScroll = () => {
           const currentScrollY = window.scrollY;
-          setIsFixed(prevScrollY >= currentScrollY && prevScrollY >= window.screen.height/2);
+          setIsFixed(prevScrollY >= currentScrollY && prevScrollY >= 35);
           prevScrollY = currentScrollY;
-          
+
         };
+
+        
       
         window.addEventListener("scroll", handleScroll);
         
@@ -85,9 +87,9 @@ const Navbar = () => {
             </button>
 
             
-            {isDropdownOpen && (
+            {(
 
-              <div className='right-0 dropdown-menu '
+              <div className={`${'dropdown-menu'} ${isDropdownOpen ? 'dropdown-menu-open':''}`}
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}>  
               <Lista/>
