@@ -17,16 +17,14 @@
             ref.current.scrollIntoView({ behavior: 'smooth' });
         }
 
-    
-
 
         return (
             <>
             <motion.div
             initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-            className='j-10-10 lg:h-screen '>
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            className='j-container lg:h-screen '>
                 
             <div className=" mx-auto min-1200 px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8 ">
                     <div className=" grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16  w-full h-full place-content-center ">
@@ -56,9 +54,9 @@
     
                     
                 </div>  
-                <Link className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline" to='/productos'>
+                    <Link className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline" to='/productos'>
                         Ver todas nuestras categorias
-                        </Link>
+                    </Link>
             </div>
         
         </div>
