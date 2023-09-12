@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Box, Divider, Drawer, IconButton, List, Toolbar, Typography } from "@mui/material";
+import { Box, Divider, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
 import { CloseOutlined } from "@mui/icons-material";
 
 
