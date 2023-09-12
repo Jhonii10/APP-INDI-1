@@ -10,6 +10,8 @@
   import Rewies from '../pages/Rewies';
   import LocationsSecren from '../pages/LocationsSecren';
   import LoadingSpinner from '../components/LoadingSpinner';
+import AppLayout from '../app/layout/AppLayout';
+import CubikaApp from '../app/pages/CubikaApp';
 
   const Products = lazy(() => import('../pages/Products'));
   const Locations = lazy(() => import('../pages/Locations'));
@@ -57,7 +59,7 @@
                 <Route path="/ubicaciones/:locationId" element={<LocationsSecren/>} />
                 <Route path="/empleados" element={<Employees />} />
                 <Route path="/empleados/registro" element={<EmployeesRegister />} />
-                <Route path="/home" element={<ProtectedRoute><Home/></ProtectedRoute> } />
+                <Route path="/home" element={<ProtectedRoute><CubikaApp/></ProtectedRoute> } />
                 <Route path="/trabajos" element={<Jobs />} />
                 <Route path="/contactanos" element={<Contact />} />
                 <Route path="/Porque-Nosotros" element={<About />} />
