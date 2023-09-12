@@ -4,13 +4,11 @@
   import Navbar from '../components/Navbar';
   import Index from '../pages/Index';
   import EmployeesRegister from '../pages/EmployeesRegister';
-  import Home from '../pages/Home';
   import { ProtectedRoute } from './PrivateRoutes';
   import ProductosSecren from '../pages/ProductosSecren';
   import Rewies from '../pages/Rewies';
   import LocationsSecren from '../pages/LocationsSecren';
   import LoadingSpinner from '../components/LoadingSpinner';
-import AppLayout from '../app/layout/AppLayout';
 import CubikaApp from '../app/pages/CubikaApp';
 
   const Products = lazy(() => import('../pages/Products'));
