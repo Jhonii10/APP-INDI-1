@@ -132,8 +132,6 @@ h6 span {
     color: #000000;
     background-color: #ffffff;
     border: none;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
   }
   /* 
@@ -254,8 +252,6 @@ h6 span {
     line-height: 48px;
     text-align: left;
     color: #000000;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
 } 
 
 
