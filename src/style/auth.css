@@ -116,6 +116,13 @@ h6 span {
   padding: 0;
 }
 
+.form-style{
+  height: 48px;
+  width: 100%;
+  padding: 13px 20px;
+  padding-left: 55px;
+   
+}
  
 
   /* .form-style {
