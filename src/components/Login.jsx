@@ -74,7 +74,7 @@ const Login = () => {
 
 
     return (
-        <div className='auth-container pt-4' >
+        <div className='auth-container' >
         <div className='mt-b alert-10'>
         {
             
