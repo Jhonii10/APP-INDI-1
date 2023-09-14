@@ -116,7 +116,7 @@ h6 span {
   padding: 0;
 }
 
-
+/*
 
   .form-style {
     padding: 13px 20px;
@@ -136,23 +136,12 @@ h6 span {
     transition: all 200ms linear;
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
   }
+  
   .form-style:focus,
   .form-style:active {
     border: none;
     outline: none;
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
-  }
-  .input-icon {
-    position: absolute;
-    top: 0;
-    left: 18px;
-    height: 48px;
-    font-size: 24px;
-    line-height: 48px;
-    text-align: left;
-    color: #32302c;
-    -webkit-transition: all 200ms linear;
-      transition: all 200ms linear;
   }
   
   .form-group input:-ms-input-placeholder  {
@@ -179,7 +168,7 @@ h6 span {
     -webkit-transition: all 200ms linear;
       transition: all 200ms linear;
   }
-  /* .form-group input:focus:-ms-input-placeholder  {
+   .form-group input:focus:-ms-input-placeholder  {
     opacity: 0;
     -webkit-transition: all 200ms linear;
       transition: all 200ms linear;
@@ -256,7 +245,7 @@ h6 span {
   }
 
 
-  .input-icon {
+  /* .input-icon {
     position: absolute;
     top: 0;
     left: 18px;
@@ -267,7 +256,7 @@ h6 span {
     color: #000000;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
-}
+} */
 
 
 
