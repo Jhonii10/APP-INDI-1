@@ -286,7 +286,7 @@ h6 span {
 
 .auth-container{
   background-image: url('https://assets-cdn.123rf.com/landing/assets/images/free-images/banner-september-v2.jpg');
-  height: calc(100vh - 176px);
+  height: calc(100vh);
   display: grid;
   place-content: center;
   background-repeat:no-repeat;
