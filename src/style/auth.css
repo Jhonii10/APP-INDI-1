@@ -42,9 +42,6 @@ h6 span {
   width: 410px;
   max-width: 100%;
   height: 400px;
-  /* -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; */
-  perspective: 900px;
   background-color: rgba(229, 229, 229, 0.2);
   backdrop-filter: blur(20px);
   border-radius: 5px;
@@ -65,9 +62,6 @@ h6 span {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform-style: preserve-3d;
-  /* transform-style: preserve-3d; */
-  transition: all 700ms ease-out;
   
 }
 
@@ -79,12 +73,6 @@ h6 span {
   border-radius: 6px;
   left: 0;
   top: 0;
-  /* -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; */
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .card-back {
@@ -222,8 +210,6 @@ h6 span {
     transition: all 200ms linear;
     padding: 0 30px;
     letter-spacing: 1px;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-align-items: center;
     -moz-align-items: center;
@@ -303,6 +289,6 @@ h6 span {
   display: grid;
   place-content: center;
   background-repeat:no-repeat;
-  background-size: cover;
   object-fit: cover;
+  
 }
