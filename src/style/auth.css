@@ -134,7 +134,7 @@ h6 span {
     border: none;
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
   } */
-  /* 
+  
   .form-style:focus,
   .form-style:active {
     border: none;
@@ -186,7 +186,7 @@ h6 span {
     -webkit-transition: all 200ms linear;
       transition: all 200ms linear;
   }
-   */
+   
   .btn{  
     border-radius: 4px;
     height: 44px;
@@ -224,9 +224,6 @@ h6 span {
     color: #ffeba7;
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
   }
-  
-  
-  
   
   .logo {
       position: absolute;
