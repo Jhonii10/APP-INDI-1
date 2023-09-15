@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
 a {
   cursor: pointer;
@@ -116,9 +116,16 @@ h6 span {
   padding: 0;
 }
 
+.form-style{
+  height: 48px;
+  width: 100%;
+  padding: 13px 20px;
+  padding-left: 55px;
+   
+}
+ 
 
-
-  .form-style {
+  /* .form-style {
     padding: 13px 20px;
     padding-left: 55px;
     height: 48px;
@@ -132,27 +139,14 @@ h6 span {
     color: #000000;
     background-color: #ffffff;
     border: none;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
-  }
+  } */
+  
   .form-style:focus,
   .form-style:active {
     border: none;
     outline: none;
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
-  }
-  .input-icon {
-    position: absolute;
-    top: 0;
-    left: 18px;
-    height: 48px;
-    font-size: 24px;
-    line-height: 48px;
-    text-align: left;
-    color: #32302c;
-    -webkit-transition: all 200ms linear;
-      transition: all 200ms linear;
   }
   
   .form-group input:-ms-input-placeholder  {
@@ -179,7 +173,7 @@ h6 span {
     -webkit-transition: all 200ms linear;
       transition: all 200ms linear;
   }
-  .form-group input:focus:-ms-input-placeholder  {
+   .form-group input:focus:-ms-input-placeholder  {
     opacity: 0;
     -webkit-transition: all 200ms linear;
       transition: all 200ms linear;
@@ -199,7 +193,7 @@ h6 span {
     -webkit-transition: all 200ms linear;
       transition: all 200ms linear;
   }
-  
+   
   .btn{  
     border-radius: 4px;
     height: 44px;
@@ -238,9 +232,6 @@ h6 span {
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
   }
   
-  
-  
-  
   .logo {
       position: absolute;
       top: 30px;
@@ -256,7 +247,7 @@ h6 span {
   }
 
 
-  .input-icon {
+   .input-icon {
     position: absolute;
     top: 0;
     left: 18px;
@@ -265,9 +256,7 @@ h6 span {
     line-height: 48px;
     text-align: left;
     color: #000000;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
-}
+} 
 
 
 
@@ -283,12 +272,13 @@ h6 span {
   margin-left: auto!important;
 }
 
+
 .auth-container{
   background-image: url('https://assets-cdn.123rf.com/landing/assets/images/free-images/banner-september-v2.jpg');
-  height: calc(100vh - 176px);
+   height: calc(100vh - 176px) ; 
   display: grid;
   place-content: center;
   background-repeat:no-repeat;
   object-fit: cover;
   
-}
+} 
