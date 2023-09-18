@@ -121,15 +121,7 @@ h6 span {
   width: 100%;
   padding: 13px 20px;
   padding-left: 55px;
-  font-size: 14px;
-}
- 
-
-  /* .form-style {
-    padding: 13px 20px;
-    padding-left: 55px;
-    height: 48px;
-    width: 100%;
+  /* font-size: 14px; */
     font-weight: 500;
     border-radius: 4px;
     
@@ -140,6 +132,15 @@ h6 span {
     background-color: #ffffff;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+ 
+
+  /* .form-style {
+    padding: 13px 20px;
+    padding-left: 55px;
+    height: 48px;
+    width: 100%;
+    
   } */
 
   .form-style:focus,
