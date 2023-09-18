@@ -54,7 +54,13 @@ h6 span {
 @media (max-width : 428px) {
   .card-3d-wrap {
     width: 100%;
-}}
+  }
+   
+  .center-wrap{
+    padding: 0 25px !important;
+  }
+
+}
 
 .card-3d-wrapper {
   width: 100%;
@@ -121,27 +127,18 @@ h6 span {
   width: 100%;
   padding: 13px 20px;
   padding-left: 55px;
-   
+  font-weight: 500;
+  font: optional;
+  border-radius: 4px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
 }
  
-
-  /* .form-style {
-    padding: 13px 20px;
-    padding-left: 55px;
-    height: 48px;
-    width: 100%;
-    font-weight: 500;
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.5px;
-    outline: none;
-    color: #000000;
-    background-color: #ffffff;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
-  } */
-  
   .form-style:focus,
   .form-style:active {
     border: none;
@@ -216,36 +213,22 @@ h6 span {
     -ms-flex-pack: center;
     text-align: center;
     border: none;
-    background-color: #ffeba7;
-    color: #102770;
+    background-color: #ffffff;
+    color: #2563eb;
     box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
   }
   .btn:active,
   .btn:focus{  
-    background-color: #102770;
-    color: #ffeba7;
+    background-color: #2563eb;
+    color: #ffffff  ;
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
   }
   .btn:hover{  
-    background-color: #102770;
-    color: #ffeba7;
+    background-color: #2563eb;
+    color: #ffffff;
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
   }
   
-  .logo {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      display: block;
-      z-index: 100;
-      transition: all 250ms linear;
-  }
-  .logo img {
-      height: 26px;
-      width: auto;
-      display: block;
-  }
-
 
    .input-icon {
     position: absolute;
