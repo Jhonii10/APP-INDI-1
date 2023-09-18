@@ -121,7 +121,7 @@ h6 span {
   width: 100%;
   padding: 13px 20px;
   padding-left: 55px;
-  font-size: 14px;
+  font-size: initial;
   font-weight: 500;
   border-radius: 4px;
   line-height: 22px;
