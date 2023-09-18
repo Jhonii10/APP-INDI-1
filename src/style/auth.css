@@ -54,7 +54,13 @@ h6 span {
 @media (max-width : 428px) {
   .card-3d-wrap {
     width: 100%;
-}}
+  }
+   
+  .center-wrap{
+    padding: 0 25px !important;
+  }
+
+}
 
 .card-3d-wrapper {
   width: 100%;
