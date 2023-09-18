@@ -121,28 +121,19 @@ h6 span {
   width: 100%;
   padding: 13px 20px;
   padding-left: 55px;
-  /* font-size: 14px; */
-    font-weight: 500;
-    border-radius: 4px;
-    
-    line-height: 22px;
-    letter-spacing: 0.5px;
-    outline: none;
-    color: #000000;
-    background-color: #ffffff;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+  -webkit-text-size-adjust: 100%;
 }
  
-
-  /* .form-style {
-    padding: 13px 20px;
-    padding-left: 55px;
-    height: 48px;
-    width: 100%;
-    
-  } */
-
   .form-style:focus,
   .form-style:active {
     border: none;
