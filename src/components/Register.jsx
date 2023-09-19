@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useMemo, useState } from 'react';
 import { Link, } from 'react-router-dom';
 import Alert from '../components/Alert';
@@ -21,7 +22,7 @@ const Register = () => {
   const [formSubmit, setFormSubmit] = useState(false);
 
   const { status, errorMessage } = useSelector( state => state.auth );
-  const isCheckingAuthentication = useMemo( () => status == 'checking', [status]);
+  const isCheckingAuthentication = useMemo( () => status === 'checking', [status]);
 
      
 
