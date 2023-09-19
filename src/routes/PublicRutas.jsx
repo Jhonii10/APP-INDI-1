@@ -3,17 +3,18 @@
   import {Navigate, Route, Routes, useLocation } from 'react-router-dom';
   import Navbar from '../components/Navbar';
   import Index from '../pages/Index';
-  import EmployeesRegister from '../pages/EmployeesRegister';
-  import { ProtectedRoute } from './PrivateRoutes';
   import ProductosSecren from '../pages/ProductosSecren';
   import Rewies from '../pages/Rewies';
   import LocationsSecren from '../pages/LocationsSecren';
   import LoadingSpinner from '../components/LoadingSpinner';
-import CubikaApp from '../app/pages/CubikaApp';
-
+  import { CheckingAuth } from '../app/components/CheckingAuth';
+  import CubikaRoutes from './CubikaRoutes';
+  import AuthRoutes from './AuthRouter';
+  import { UseCheckAuth } from '../hooks/useCheckAuth';
+  ;
+ 
   const Products = lazy(() => import('../pages/Products'));
   const Locations = lazy(() => import('../pages/Locations'));
-  const Employees = lazy(() => import('../pages/Employees'));
   const Jobs = lazy(() => import('../pages/Jobs'));
   const Contact = lazy(() => import('../pages/Contact'));
   const About = lazy(() => import('../pages/About'));
@@ -39,8 +40,12 @@ import CubikaApp from '../app/pages/CubikaApp';
         }, [location]);
         
     
-        
-        
+        const {status} = UseCheckAuth()
+   
+    if( status === 'checking' || status === ''){
+        return <CheckingAuth/>
+    }
+       
     
     return (
         <>
@@ -50,19 +55,21 @@ import CubikaApp from '../app/pages/CubikaApp';
               }
               <ScrollToTop/>
               <Routes>
-                <Route path="/" element={<Index />} />
+                <Route index element={<Index />} />
                 <Route path="/productos" element={<Products />} />
                 <Route path='/productos/:categoryId' element={<ProductosSecren/>}/>
                 <Route path="/ubicaciones" element={<Locations />} />
                 <Route path="/ubicaciones/:locationId" element={<LocationsSecren/>} />
-                <Route path="/empleados" element={<Employees />} />
-                <Route path="/empleados/registro" element={<EmployeesRegister />} />
-                <Route path="/home" element={<ProtectedRoute><CubikaApp/></ProtectedRoute> } />
+                {
+                (status === 'authenticated')
+                ? <Route path="*" element={<CubikaRoutes/>}/>
+                : <Route path="*" element={<AuthRoutes/>}/>
+                }
                 <Route path="/trabajos" element={<Jobs />} />
                 <Route path="/contactanos" element={<Contact />} />
                 <Route path="/Porque-Nosotros" element={<About />} />
                 <Route path='/Reviews' element={<Rewies/>}/>
-                <Route path='/*' element={<Navigate to='/'/>}/>
+                <Route path='/*' element={<Navigate to='/'/>}/> 
                 
               </Routes>
             </Suspense>
