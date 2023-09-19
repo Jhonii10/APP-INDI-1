@@ -1,75 +1,29 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import React, { useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import Alert from '../components/Alert';
 import '../style/auth.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { useForm } from '../hooks/useForm';
+import { startLoginWithEmailPassword } from '../store/auth/thunks';
 
+const formData = {
+  email:'',
+  password:'',
+
+}
 
 const Login = () => {
 
-    const navigate = useNavigate();
-    const [error, setError] = useState();
+    const {status , errorMessage} = useSelector(state => state.auth);
+    const dispatch = useDispatch();
+    const {email,password,onInputChange} = useForm(formData)
+    const isAuthenticating = useMemo(()=>status === 'checking',[status])
 
-    const [user, setUser] = useState({
-        email:'',
-        password:'',
-    });
+    const onSubmit = (event)=>{
+      event.preventDefault()
+      dispatch(startLoginWithEmailPassword({email,password})) 
+  }
 
-    const {login, resetPassword} = useAuth()
-
-    const handleChange = ({target:{name, value}})=>{
-        setUser({...user, [name]:value})
-    }
-
-    const handleSubmit = async(e)=>{
-        e.preventDefault()
-        setError('')
-        try {
-           await login(user.email,user.password)
-           navigate('/home')
-           
-        } catch (error) {
-            if(error.code === 'auth/email-already-in-use'){
-                setError('Email already in use')
-            }
-            else{
-                setError(error.message)
-            }
-
-            setTimeout(() => {
-                return setError('');
-            }, 3000);
-            
-        }
-
-
-        
-    }
-
-    
-
-
-  
-
-    const handleResetPassword = async()=>{
-        if (!user.email) {
-          return setError('Please enter your email')
-        }
-
-        try {
-            await resetPassword(user.email)
-            setError('te enviamos un correo para que puedas restablezar tu contraseña')
-        } catch (error) {
-            setError(error.massage)
-        }
-        
-    }
-
-    const [inicio, setInicio] = useState(false);
-
-    const handleLogin = ()=>{
-        setInicio(true)
-    }
 
 
 
@@ -78,19 +32,19 @@ const Login = () => {
         <div className='mt-b alert-10'>
         {
             
-            error && <Alert massage={error}/>
+          !!errorMessage && <Alert massage={errorMessage}/>
         }
         
         
         
         </div>
 
-        <div className={`card-3d-wrap mx-auto ${inicio ? 'clicked':''   }`}>
+        <div className={`card-3d-wrap mx-auto`}>
   <div className="card-3d-wrapper ">
     <div className="card-front">
       <div className="center-wrap">
         <div className="section text-center">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={onSubmit}>
         <h4 className="mb-4 pb-3">Log In</h4>
                       <div className="form-group ">
                         <input
@@ -98,7 +52,7 @@ const Login = () => {
                           name="email"
                           className="form-style"
                           placeholder="example@gmail.com"
-                          onChange={handleChange}
+                          onChange={onInputChange}
                         />
                         <i className=" input-icon fa-solid fa-at"></i>
                       </div>
@@ -108,18 +62,18 @@ const Login = () => {
                           name="password"
                           className="form-style"
                           placeholder="Your Password"
-                          onChange={handleChange}
+                          onChange={onInputChange}
                           autoComplete="off"
                         />
                         <i className="input-icon fa-solid fa-lock"  ></i>
                       </div>
 
                         <div >
-                      <input type='submit' className="btn mt-4" value='submit'/>
+                      <input type='submit' className="btn mt-4" value='submit' disabled={isAuthenticating}/>
                       <p className="mb-0 mt-4 text-center">
-                        <button onClick={handleResetPassword} className="link">
+                        {/* <button onClick={handleResetPassword} className="link">
                           Forgot your password?
-                        </button>
+                        </button> */}
                       </p>
                       </div>
 
@@ -135,7 +89,7 @@ const Login = () => {
   </div>
   
   
-</div><span className='mt-4 text-sm flex justify-between px-3'>Don't have an Account<Link to='/empleados/registro' onClick={handleLogin}>Register</Link></span>
+</div><span className='mt-4 text-sm flex justify-between px-3'>Don't have an Account<Link to='/empleados/registro'>Register</Link></span>
   
 
       

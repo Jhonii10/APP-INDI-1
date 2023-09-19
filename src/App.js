@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css'
-import Rutas from './routes/PublicRutas';
-import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter } from 'react-router-dom';
 import LoadingSpinner from './components/LoadingSpinner';
+import Rutas from './routes/PublicRutas';
 
 
 function App() {
@@ -23,11 +22,11 @@ function App() {
   return (
     <div className="App ">{
        loading ? <div className="spinner-container"><LoadingSpinner/> </div>:
-      <AuthProvider>
+      <>
       <BrowserRouter>
       <Rutas/>
       </BrowserRouter>
-      </AuthProvider>
+      </>
     }
     </div>  
   );
