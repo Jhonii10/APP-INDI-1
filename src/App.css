@@ -1186,3 +1186,21 @@ textarea{
     transform: translateY(0);
   }
 }
+
+
+
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Estilo del thumb (la parte arrastrable de la barra) */
+::-webkit-scrollbar-thumb {
+  background-color: #cbc5c5;
+  border: 1px solid #cbc5c5;
+  border-radius: 10px; /* Radio de borde del thumb */
+}
+
+/* Estilo del track (la parte en la que se desplaza el thumb) */
+::-webkit-scrollbar-track {
+  background-color: #fafafa; /* Color del track */
+}
