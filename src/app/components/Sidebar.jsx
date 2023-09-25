@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Box, Divider, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
 import { CloseOutlined } from "@mui/icons-material";
+import { useSelector } from "react-redux";
 
 
 const Sidebar = ({draweWidth , isOpen, toggleSidebar}) => {
 
+    const {displayName} = useSelector(state => state.auth)
+   
     return (
         <Box
             component={'nav'}
@@ -27,7 +30,7 @@ const Sidebar = ({draweWidth , isOpen, toggleSidebar}) => {
 
             <Toolbar >
                 <Typography variant="h6" noWrap component={'div'}>
-                    {'nombre usuario'}
+                    {displayName}
                 </Typography>
             </Toolbar>
 
