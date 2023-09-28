@@ -10,7 +10,7 @@ import { noCase } from 'change-case';
 
 const NOTIFICATIONS = [
     {
-      id: faker.datatype.uuid(),
+      id: faker.string.uuid(),
       title: 'Tu pedido esta realizado',
       description: 'Esperando el envio',
       avatar: null,
@@ -19,8 +19,8 @@ const NOTIFICATIONS = [
       isUnRead: true,
     },
     {
-      id: faker.datatype.uuid(),
-      title: faker.name.fullName(),
+      id: faker.string.uuid(),
+      title: faker.person.fullName(),
       description: 'respondio a tu comentario',
       avatar: '/assets/images/avatars/avatar_2.jpg',
       type: 'friend_interactive',
@@ -28,7 +28,7 @@ const NOTIFICATIONS = [
       isUnRead: true,
     },
     {
-      id: faker.datatype.uuid(),
+      id: faker.string.uuid(),
       title: 'Tienes mensajes nuevos ',
       description: '5 mensajes no leidos',
       avatar: null,
@@ -37,7 +37,7 @@ const NOTIFICATIONS = [
       isUnRead: false,
     },
     {
-      id: faker.datatype.uuid(),
+      id: faker.string.uuid(),
       title: 'Tienes un nuevo correo',
       description: 'enviado por ana de armas',
       avatar: null,
@@ -46,7 +46,7 @@ const NOTIFICATIONS = [
       isUnRead: false,
     },
     {
-      id: faker.datatype.uuid(),
+      id: faker.string.uuid(),
       title: 'Procesando entrega',
       description: 'Tu pedidio esta siendo enviado a tu direccion',
       avatar: null,
