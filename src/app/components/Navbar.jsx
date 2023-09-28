@@ -3,6 +3,7 @@ import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 import Account from './header/Account';
 import Notifications from './header/Notifications';
+import Contacts from './header/Contacts';
 
 
 const Navbar = ({draweWidth = 240, toggleSidebar }) => {
@@ -40,29 +41,13 @@ const Navbar = ({draweWidth = 240, toggleSidebar }) => {
                   sx={{display:'flex', alignItems:'center', gap:'8px'}}
                 >
                 <Notifications/>
-                 <IconButton
-                sx={{color:'rgb(151 158 163)'}}
-                >
-                 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlnsXlink="http://www.w3.org/1999/xlink"
-  aria-hidden="true"
-  role="img"
-  className="component-iconify MuiBox-root css-9uy14h iconify iconify--solar"
-  width="1em"
-  height="1em"
-  viewBox="0 0 24 24"
->
-  <g fill="currentColor">
-    <circle cx={15} cy={6} r={3} opacity=".4" />
-    <ellipse cx={16} cy={17} opacity=".4" rx={5} ry={3} />
-    <circle cx="9.001" cy={6} r={4} />
-    <ellipse cx="9.001" cy="17.001" rx={7} ry={4} />
-  </g>
-</svg>
-                </IconButton>
+                <Contacts/>
               <IconButton
-              sx={{color:'rgb(151 158 163)'}}
+              sx={{color:'rgb(151 158 163)',
+              '& svg': {
+                animation: 'spin 6s linear infinite', 
+                },
+              }}
                 
                >
                 <svg
