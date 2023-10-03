@@ -1,9 +1,12 @@
-import { Badge, Drawer, IconButton, Stack, Typography,  } from '@mui/material';
+import {  Badge, Box, ButtonBase, Divider, Drawer, IconButton, Stack, Typography,  } from '@mui/material';
 import React, { useState } from 'react';
+import ScrollBar from '../scrollbar/ScrollBar';
+import SvgColor from '../svg-colors/SvgColor';
 
 
 const Settings = () => {
     const [open, setOpen] = useState(null);
+    const [fullSecreen, setFullSecreen] = useState(true);
 
     const handleOpen = (event) => {
         setOpen(event.currentTarget);
@@ -54,11 +57,19 @@ const Settings = () => {
               open={Boolean(open)}
               onClose={handleClose}
               anchor='right'
+              BackdropProps={{
+                sx: {
+                backgroundColor: 'transparent',
+                },
+            }}
 
               PaperProps={{
                 sx:{
-                    width:240,
-                    
+                    width:280,
+                    backdropFilter:'blur(20px)',
+                    backgroundColor:'rgba(255, 255, 255, 0.9)',
+                    boxShadow:'rgba(145, 158, 171, 0.24) -40px 40px 80px -8px',
+
                 }
               }}
               >
@@ -118,6 +129,52 @@ const Settings = () => {
           </IconButton>
 
               </Stack>
+
+              <Divider/>
+
+              <ScrollBar>
+                <Stack sx={{
+                    display:'flex',
+                    flexDirection:'column',
+                    justifyContent:'center',
+                    alignItems:'center',
+                    gap:'24px',
+                    padding:'24px',
+                    height:'80vh'
+                }}>
+
+                aqui las opciones 
+
+                </Stack>
+
+              </ScrollBar>
+
+              <Box
+               sx={{
+                 padding:2,
+               }}
+               >
+                <ButtonBase sx={
+                    {
+                        width:'100%',
+                        height:'48px',
+                        justifyContent:'center',
+                        borderRadius:'8px',
+                        color:'rgb(145, 158, 171)',
+                        border:'1px solid rgba(145, 158, 171, 0.08)'
+                    }}
+                    onClick={()=>{setFullSecreen(!fullSecreen)}}
+                >
+                <SvgColor src={ fullSecreen ?'/assets/icons/settings/ic_exit_full_screen.svg':'/assets/icons/settings/ic_full_screen.svg'} sx={{ width: '14px', height: '14px', marginRight:'8px', ...(fullSecreen && {background:'linear-gradient(135deg, rgb(91, 228, 155) 0%, rgb(0, 167, 111) 100%)'})}}/>
+                
+                    <Typography component={'font'}>
+                        <Typography component={'font'}>
+                         Pantalla completa
+                        </Typography>
+                       
+                    </Typography>
+                </ButtonBase>
+              </Box>
                 
               </Drawer>
 
@@ -127,3 +184,6 @@ const Settings = () => {
 }
 
 export default Settings;
+
+
+
