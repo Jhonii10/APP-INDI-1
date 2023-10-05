@@ -141,7 +141,11 @@ const Settings = () => {
                     padding:'24px',
                 }}>
 
-                <Options/>
+                {
+                    DATA.map((dat)=>(
+                        <Options title={dat.title} icon={dat.icon} icon2={dat.icon2}/>
+                    ))
+                }
 
 
                 </Stack>
@@ -188,13 +192,13 @@ export default Settings;
 
 
 
-const Options = ()=>{
+const Options = ({title , icon , icon2})=>{
     return (
         <div>
             <Typography component='div'>
                 <Typography component='font'>
                  <Typography component='font'>
-                    Modo
+                    {title}
                  </Typography>
                 </Typography>
                 
@@ -218,7 +222,7 @@ const Options = ()=>{
                         }
                     }}
                     >
-                        <SvgColor src='/assets/icons/settings/ic_sun.svg'/>
+                        <SvgColor src={icon}/>
                     </ButtonBase>
                     <ButtonBase
                     sx={{
@@ -230,7 +234,7 @@ const Options = ()=>{
                         boxShadow:'rgba(145, 158, 171, 0.08) -24px 8px 24px -4px'
                     }}
                     >
-                        <SvgColor src='/assets/icons/settings/ic_moon.svg'/>
+                        <SvgColor src={icon2}/>
                     </ButtonBase>
                 </Stack>
          
@@ -238,3 +242,43 @@ const Options = ()=>{
         </div>
     )
 }
+
+
+
+const DATA = [
+    {
+        title: "Modo",
+        icon: '/assets/icons/settings/ic_sun.svg',
+        icon2: '/assets/icons/settings/ic_moon.svg'
+
+    },
+    {
+        title: "Contraste",
+        icon: '/assets/icons/settings/ic_contrast.svg',
+        icon2: '/assets/icons/settings/ic_contrast_bold.svg'
+
+    },
+    {
+        title: "Direccion",
+        icon: '/assets/icons/settings/ic_align_left.svg',
+        icon2: '/assets/icons/settings/ic_align_right.svg'
+
+    },
+
+    {
+        title: "Disposicion",
+        
+    },
+    {
+        title: 'Estirar',
+    
+
+    },
+    {
+        title: 'Preajustes',
+        
+
+    },
+
+
+]
