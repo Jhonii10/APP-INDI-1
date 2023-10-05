@@ -137,13 +137,12 @@ const Settings = () => {
                     display:'flex',
                     flexDirection:'column',
                     justifyContent:'center',
-                    alignItems:'center',
                     gap:'24px',
                     padding:'24px',
-                    height:'80vh'
                 }}>
 
-                aqui las opciones 
+                <Options/>
+
 
                 </Stack>
 
@@ -187,3 +186,55 @@ export default Settings;
 
 
 
+
+
+const Options = ()=>{
+    return (
+        <div>
+            <Typography component='div'>
+                <Typography component='font'>
+                 <Typography component='font'>
+                    Modo
+                 </Typography>
+                </Typography>
+                
+            </Typography>
+
+            <Stack sx={{
+                display:'flex',
+                flexDirection:'row',
+                gap:'16px'
+            }}>
+                    <ButtonBase 
+                    sx={{
+                        width:'100%',
+                        height:'80px',
+                        borderRadius:'8px',
+                        border:'1px solid rgba(145, 158, 171, 0.08)',
+                        backgroundColor:'rgba(255, 255, 255, 0.3)',
+                        boxShadow:'rgba(145, 158, 171, 0.08) -24px 8px 24px -4px',
+                        '& .svg-color':{
+                            background:'linear-gradient(135deg, rgb(91, 228, 155) 0%, rgb(0, 167, 111) 100%)'
+                        }
+                    }}
+                    >
+                        <SvgColor src='/assets/icons/settings/ic_sun.svg'/>
+                    </ButtonBase>
+                    <ButtonBase
+                    sx={{
+                        width:'100%',
+                        height:'80px',
+                        border:'1px solid rgba(145, 158, 171, 0.08)',
+                        borderRadius:'8px',
+                        backgroundColor:'rgba(255, 255, 255, 0.3)',
+                        boxShadow:'rgba(145, 158, 171, 0.08) -24px 8px 24px -4px'
+                    }}
+                    >
+                        <SvgColor src='/assets/icons/settings/ic_moon.svg'/>
+                    </ButtonBase>
+                </Stack>
+         
+
+        </div>
+    )
+}
