@@ -6,7 +6,7 @@
 
     const Settings = () => {
         const [open, setOpen] = useState(null);
-        const [fullSecreen, setFullSecreen] = useState(true);
+        const [fullSecreen, setFullSecreen] = useState(false    );
 
         const handleOpen = (event) => {
             setOpen(event.currentTarget);
