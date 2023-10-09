@@ -1,4 +1,4 @@
-import { Avatar, Badge, Box, Button, Divider, IconButton, List, ListItemAvatar, ListItemButton, ListItemText, ListSubheader, Popover, Typography } from '@mui/material';
+import { Avatar, Badge, Box, Button, Divider, Drawer, IconButton, List, ListItemAvatar, ListItemButton, ListItemText, ListSubheader, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import ScrollBar from '../scrollbar/ScrollBar';
 import { faker } from '@faker-js/faker';
@@ -111,24 +111,22 @@ const Notifications = () => {
               </Badge>
               </IconButton>
               
-              <Popover
+              <Drawer
         open={Boolean(open)}
         anchorEl={open}
         onClose={handleClose}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+        anchor='right'
+        BackdropProps={{
+                    sx: {
+                    backgroundColor: 'transparent',
+                    },
+                }}
         PaperProps={{
-          sx: {
-            width: 400,
-            
-            position:'fixed',
-            top:'0px !important',
-            left:'unset !important',
-            right:'0px',
-            maxHeight:'100%'
-          },
+            sx:{
+                width:'100%',
+                maxWidth:'420px'
+            }
         }}
-        
         
       >
         <Box sx={{ display: 'flex', alignItems: 'center', py: 2, px: 2.5 }}>
@@ -230,7 +228,7 @@ const Notifications = () => {
             Ver Todo
           </Button>
         </Box>
-      </Popover>
+      </Drawer>
 
             
         </>
