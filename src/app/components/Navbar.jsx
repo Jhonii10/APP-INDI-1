@@ -1,11 +1,11 @@
 import { MenuOutlined } from '@mui/icons-material';
-import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Grid, IconButton, Toolbar } from '@mui/material';
 import React from 'react';
 import Account from './header/Account';
 import Notifications from './header/Notifications';
 import Contacts from './header/Contacts';
 import Settings from './header/Settings';
-
+import Search from './header/Search';
 
 const Navbar = ({draweWidth = 240, toggleSidebar }) => {
 
@@ -36,7 +36,7 @@ const Navbar = ({draweWidth = 240, toggleSidebar }) => {
                 justifyContent={'space-between'}
                 alignItems={'center'}
             >
-                <Typography variant="h6" noWrap component={'div'}  color='#7f7f7f'>Cubika App</Typography>
+                 <Search/> 
 
                 <Grid
                   sx={{display:'flex', alignItems:'center', gap:'8px'}}
