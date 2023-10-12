@@ -1,4 +1,3 @@
-import { MenuOutlined } from '@mui/icons-material';
 import { AppBar, Grid, IconButton, Toolbar } from '@mui/material';
 import React from 'react';
 import Account from './header/Account';
@@ -6,8 +5,11 @@ import Notifications from './header/Notifications';
 import Contacts from './header/Contacts';
 import Settings from './header/Settings';
 import Search from './header/Search';
+import SvgColor from './svg-colors/SvgColor';
 
-const Navbar = ({draweWidth = 240, toggleSidebar }) => {
+const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`}/>;
+
+const Navbar = ({draweWidth = 240, onOpenNav }) => {
 
 
     return (
@@ -24,10 +26,11 @@ const Navbar = ({draweWidth = 240, toggleSidebar }) => {
             <IconButton
                 
                 edge="start"
-                sx={{mr:2 , display: {md: 'none'}, color:'rgb(151 158 163)'}}
-                onClick={toggleSidebar}
+                sx={{ display: {md: 'none'}, color:'rgb(151 158 163)'}}
+                onClick={onOpenNav}
             >
-                <MenuOutlined/>
+                { icon('ic_menu_item')}
+               
             </IconButton>
 
             <Grid 

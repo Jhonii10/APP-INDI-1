@@ -6,15 +6,11 @@ import Sidebar from '../components/Sidebar';
 const draweWidth = 240;
 const AppLayout = ({children}) => {
 
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-
-    const toggleSidebar = () => {
-      setSidebarOpen(!sidebarOpen);
-    };
+    const [open, setOpen] = useState(false); 
     return (
         <Box display={'flex'} >
-           <Navbar draweWidth={draweWidth}/>
-           <Sidebar draweWidth={draweWidth} isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+           <Navbar draweWidth={draweWidth} onOpenNav={() => setOpen(true)} /> 
+           <Sidebar draweWidth={draweWidth} openNav={open} onCloseNav={() => setOpen(false)} />
            <Box 
                 component={'main'}
                 sx={{flexGrow:1, p:3}}
