@@ -5,9 +5,11 @@ import { useSelector } from "react-redux";
 import useResponsive from "../hooks/useResponsive";
 import SvgColor from "./svg-colors/SvgColor";
 import ScrollBar from "./scrollbar/ScrollBar";
+import NavSetion from "./sidebar-setions/NavSetion";
+import navConfig from "./sidebar-setions/config";
 
 
-const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{width:'30px', height:'30px'}}/>;
+const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{width:'30px', height:'30px', backgroundColor:'rgb(7, 141, 238)'}}/>;
 
 const StyledAccount = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -67,7 +69,7 @@ const Sidebar = ({draweWidth , openNav, onCloseNav}) => {
             </Box>
 
             <ScrollBar>
-                {/* lista de views */}
+                <NavSetion data={navConfig}/>
             </ScrollBar>
 
             </>
