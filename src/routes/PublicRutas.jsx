@@ -1,4 +1,4 @@
-  import React, { Suspense, useEffect, useState } from 'react';
+  import React, { Suspense, useEffect } from 'react';
   import { lazy } from 'react';
   import {Navigate, Route, Routes, useLocation } from 'react-router-dom';
   import Navbar from '../components/Navbar';
@@ -32,13 +32,10 @@
           return null;
         };
 
-        const [showNavbar, setShowNavbar] = useState(true);
-        const location = useLocation();
-      
-        useEffect(() => {
-          setShowNavbar(location.pathname !== '/home');
-        }, [location]);
         
+        const location = useLocation();
+        
+        const isDashboardRoute = location.pathname.startsWith('/dashboard');
     
         const {status} = UseCheckAuth()
    
@@ -50,9 +47,7 @@
     return (
         <>
             <Suspense fallback={  <div className="spinner-container"><LoadingSpinner/> </div>}>
-              {
-                showNavbar && <Navbar/>
-              }
+            {isDashboardRoute ? null : <Navbar />}
               <ScrollToTop/>
               <Routes>
                 <Route index element={<Index />} />
