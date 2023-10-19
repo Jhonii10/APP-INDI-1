@@ -1,12 +1,12 @@
 import React from 'react';
-import AppLayout from '../layout/AppLayout';
 import PruebaViews from '../views/PruebaViews';
 
-const CubikaApp = () => {
+const CubikaApp = ({title}) => {
     return (
-        <AppLayout>
-           <PruebaViews/>
-        </AppLayout>
+        <>
+           <PruebaViews title={title}/>
+
+        </>
     );
 }
 

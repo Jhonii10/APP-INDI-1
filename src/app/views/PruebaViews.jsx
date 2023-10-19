@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 
 
-const PruebaViews = () => {
+const PruebaViews = ({title}) => {
     return (
         <Grid
             container
@@ -15,7 +15,7 @@ const PruebaViews = () => {
 
         <Grid item xs={12}>
             <Typography color={'white'} variant="h5">
-             Cubika app
+             {title}
             </Typography>
         </Grid>
 

@@ -7,6 +7,8 @@ import SvgColor from "./svg-colors/SvgColor";
 import ScrollBar from "./scrollbar/ScrollBar";
 import NavSetion from "./sidebar-setions/NavSetion";
 import navConfig from "./sidebar-setions/config";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 
 const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{width:'30px', height:'30px', backgroundColor:'rgb(7, 141, 238)'}}/>;
@@ -25,11 +27,18 @@ const StyledAccount = styled('div')(({ theme }) => ({
     photoURL: '/assets/images/avatars/avatar_default.jpg',
   };
 
-const Sidebar = ({draweWidth , openNav, onCloseNav}) => {
+const Sidebar = ({draweWidth, openNav, onCloseNav}) => {
 
     const {displayName} = useSelector(state => state.auth)
-    const isDesktop = useResponsive('up', 'md' );
+    const isDesktop = useResponsive('up','lg');
+    const { pathname } = useLocation();
 
+    useEffect(() => {
+        if (openNav) {
+          onCloseNav();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [pathname]);
 
     const content = (
             <>
