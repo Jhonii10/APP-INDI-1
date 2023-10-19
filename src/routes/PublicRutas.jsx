@@ -8,9 +8,9 @@
   import LocationsSecren from '../pages/LocationsSecren';
   import LoadingSpinner from '../components/LoadingSpinner';
   import { CheckingAuth } from '../app/components/CheckingAuth';
-  import CubikaRoutes from './CubikaRoutes';
   import AuthRoutes from './AuthRouter';
   import { UseCheckAuth } from '../hooks/useCheckAuth';
+  import Router from '../app/routes/routes';
   ;
  
   const Products = lazy(() => import('../pages/Products'));
@@ -57,7 +57,7 @@
                 <Route path="/ubicaciones/:locationId" element={<LocationsSecren/>} />
                 {
                 (status === 'authenticated')
-                ? <Route path="*" element={<CubikaRoutes/>}/>
+                ? <Route path="*" element={<Router/>}/>
                 : <Route path="*" element={<AuthRoutes/>}/>
                 }
                 <Route path="/trabajos" element={<Jobs />} />

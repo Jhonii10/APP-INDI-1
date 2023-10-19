@@ -17,7 +17,7 @@ const Navbar = ({draweWidth = 240, onOpenNav }) => {
             
             position="fixed"
             sx={{
-                width: { md: `calc(100% - ${draweWidth}px)` },
+                width: { lg: `calc(100% - ${draweWidth}px)` },
                 ml:{sm:`${draweWidth}px`}, backgroundColor:'rgba(255, 255, 255, 0.8)', backdropFilter:'blur(6px)'
                 }}
                 
@@ -26,7 +26,7 @@ const Navbar = ({draweWidth = 240, onOpenNav }) => {
             <IconButton
                 
                 edge="start"
-                sx={{ display: {md: 'none'}, color:'rgb(151 158 163)'}}
+                sx={{ display: {lg: 'none'}, color:'rgb(151 158 163)'}}
                 onClick={onOpenNav}
             >
                 { icon('ic_menu_item')}
