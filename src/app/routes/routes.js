@@ -1,6 +1,7 @@
 import { Navigate, useRoutes } from 'react-router-dom';
 import AppLayout from '../layout/AppLayout';
 import CubikaApp from '../pages/CubikaApp';
+import DashboardApp from '../pages/DashboardApp';
 
 // ----------------------------------------------------------------------
 
@@ -11,7 +12,7 @@ export default function Router() {
       element: <AppLayout />,
       children: [
         { element: <Navigate to="/dashboard/app" replace />, index: true },
-        { path: 'app', element: <CubikaApp title={'app'} /> },
+        { path: 'app', element: <DashboardApp/> },
         { path: 'commerce', element: <CubikaApp title={'commerce'} /> },
         { path: 'user', element: <CubikaApp title={'user'} /> },
         { path: 'products', element: <CubikaApp title={'productos'} /> },
