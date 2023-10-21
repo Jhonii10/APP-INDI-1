@@ -35,7 +35,7 @@ const AppWelcome = () => {
             <Typography variant="body2">
               If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything.
             </Typography>
-            <Button variant="contained"  color="primary" size="medium">
+            <Button variant="button"  color="primary" size="medium">
               Go Now
             </Button>
           </Stack>
