@@ -62,7 +62,7 @@ const AppSlider = () => {
             </Stack>
 
         
-                <Box component={'span'} sx={{ position:'relative', display:'inline-flex', width:'100%'}} 
+                <Box component={'span'} sx={{ position:'relative', verticalAlign:'bottom', display:'inline-flex', width:'100%'}} 
                 height={{xs:'295px', xl:'320px'}}
                 >
                 <Box component={'span'} >

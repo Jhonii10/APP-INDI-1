@@ -19,7 +19,7 @@ const DashboardApp = () => {
                 </Grid2>
 
 
-                <Grid2 item xs={12} sm={6} md={4} sx={{height:'110vh'}}>
+                <Grid2 item xs={12} sm={6} md={4} >
                 <div>Item 1</div>              
                 </Grid2>
                 <Grid2 item xs={12} sm={6} md={4}>
