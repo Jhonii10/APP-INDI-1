@@ -551,10 +551,6 @@ input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
   
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 
 .jhoni-phone-ul{
   margin: 0;
