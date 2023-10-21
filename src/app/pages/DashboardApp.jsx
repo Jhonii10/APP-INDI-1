@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import React from 'react';
 import AppWelcome from '../components/secctions/@dashboard/app/AppWelcome';
+import AppSlider from '../components/secctions/@dashboard/app/AppSlider';
 
 const DashboardApp = () => {
     return (
@@ -13,8 +14,8 @@ const DashboardApp = () => {
                  <AppWelcome/>            
                 </Grid2>
 
-                <Grid2 item xs={12}  md={4} sx={{padding:1 , border:'1px dashed'}}>
-                <div>Item 2</div>              
+                <Grid2 item xs={12}  md={4} >
+                <AppSlider/>             
                 </Grid2>
 
 
