@@ -3,6 +3,7 @@ import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import React from 'react';
 import AppWelcome from '../components/secctions/@dashboard/app/AppWelcome';
 import AppSlider from '../components/secctions/@dashboard/app/AppSlider';
+import AppWebVisitis from '../components/secctions/@dashboard/app/AppWebVisitis';
 
 const DashboardApp = () => {
     return (
@@ -15,20 +16,50 @@ const DashboardApp = () => {
                 </Grid2>
 
                 <Grid2 item xs={12}  md={4} >
-                <AppSlider/>             
+                <AppSlider />             
                 </Grid2>
 
-
-                <Grid2 item xs={12} sm={6} md={4} >
-                <div>Item 1</div>              
-                </Grid2>
                 <Grid2 item xs={12} sm={6} md={4}>
-                <div>Item 2</div>              
+                <div>Concurrent visist</div>              
+                </Grid2>
+
+
+                <Grid2 item xs={12} md={8} >
+                <AppWebVisitis title="Website Visits"
+              subheader="(+43%) than last year"
+              chartLabels={[
+                '01/01/2023',
+                '02/01/2023',
+                '03/01/2023',
+                '04/01/2023',
+                '05/01/2023',
+                '06/01/2023',
+                '07/01/2023',
+                '08/01/2023',
+                '09/01/2023',
+                '10/01/2023',
+                '11/01/2023',
+                '12/01/2023',
+              ]}
+              chartData={[
+                
+                {
+                  name: 'Asia',
+                  type: 'line',
+                  fill: 'solid',
+                  data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 35, 51,49],
+                },
+                {
+                  name: 'America',
+                  type: 'line',
+                  fill: 'solid',
+                  data: [10, 34, 13, 56, 77, 88, 99, 77, 45, 13, 56,77],
+                },
+                
+              ]}/>             
                 </Grid2>
                 
-                <Grid2 item xs={12} sm={6} md={4}>
-                <div>Item 3</div>              
-                </Grid2>
+                
 
 
                 <Grid2 item xs={12} sm={6} md={4} sx={{padding:1}}>
