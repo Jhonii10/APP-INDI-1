@@ -40,7 +40,7 @@ const AppWelcome = () => {
             </Button>
           </Stack>
         
-        <Stack component={'span'}  sx={{ width:'100%', maxWidth:'360px', p:4 , '& * path':{background:'red', color:'blue'}}}> 
+        <Stack component={'span'}  sx={{ width:'100%', maxWidth:'360px', p:{xs:'40px', } , '& * path':{background:'red', color:'blue'}, marginLeft:'auto', marginRight:'auto'}}> 
          
         <svg
   className="MuiBox-root css-uwwqev"
