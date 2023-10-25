@@ -4,8 +4,13 @@ import React from 'react';
 import AppWelcome from '../components/secctions/@dashboard/app/AppWelcome';
 import AppSlider from '../components/secctions/@dashboard/app/AppSlider';
 import AppWebVisitis from '../components/secctions/@dashboard/app/AppWebVisitis';
+import AppCurrentVisits from '../components/secctions/@dashboard/app/AppCurrentVisits';
+import { useTheme } from '@mui/material/styles';
 
 const DashboardApp = () => {
+    const theme = useTheme();
+
+
     return (
         <>
             <Container maxWidth='xl' >
@@ -20,7 +25,21 @@ const DashboardApp = () => {
                 </Grid2>
 
                 <Grid2 item xs={12} sm={6} md={4}>
-                <div>Concurrent visist</div>              
+                <AppCurrentVisits
+              title="Current Visits"
+              chartData={[
+                { label: 'America', value: 4344 },
+                { label: 'Asia', value: 5435 },
+                { label: 'Europe', value: 1443 },
+                { label: 'Africa', value: 4443 },
+              ]}
+              chartColors={[
+                theme.palette.primary.main,
+                theme.palette.info.main,
+                theme.palette.warning.main,
+                theme.palette.error.main,
+              ]}
+            />              
                 </Grid2>
 
 
