@@ -33,6 +33,8 @@ const StyledChartWrapper = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 
+
+
 export default function AppCurrentVisits({ title, subheader, chartColors, chartData, ...other }) {
   const theme = useTheme();
 
@@ -56,14 +58,33 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
       },
     },
     plotOptions: {
-      pie: { donut: { labels: { show: false } } },
-      
-    },
+      pie: {
+        donut: {
+          size: '90%', // Adjust the size here, e.g., '70%' for a smaller donut chart
+          labels: {
+            show: true,
+            total: {
+              show: true,
+              label: 'Total', // Customize the label for the total
+              color: 'black', // Change the color of the total label
+              formatter: function (w) {
+                // Customize the format of the total label
+                return fNumber(chartSeries.reduce((a, b) => a + b, 0));
+              },
+              
+            },
+            value: {
+              fontSize: '24px', // Adjust the font size here to make the result label smaller
+            },
+          },
+        },
+      },}
+  
   });
 
   return (
     <Card {...other}>
-      <CardHeader title={title} subheader={subheader} />
+      <CardHeader title={title} subheader={subheader} sx={{'& span':{textAlign:'left', fontWeight:'700 !important' ,fontSize:'1.125rem', fontFamily:'"Public Sans", sans-serif'}}}/>
 
       <StyledChartWrapper dir="ltr">
         <ReactApexChart type="donut" series={chartSeries} options={chartOptions} height={280} />
