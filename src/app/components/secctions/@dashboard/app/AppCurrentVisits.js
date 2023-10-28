@@ -83,8 +83,8 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
   });
 
   return (
-    <Card {...other}>
-      <CardHeader title={title} subheader={subheader} sx={{'& span':{textAlign:'left', fontWeight:'700 !important' ,fontSize:'1.125rem', fontFamily:'"Public Sans", sans-serif'}}}/>
+    <Card {...other} sx={{'& *':{ fontFamily:'"Quicksand", sans-serif !important'}}}>
+      <CardHeader title={title} subheader={subheader} sx={{'& *':{textAlign:'left', fontWeight:'700 !important' ,fontSize:'1.125rem', fontFamily:'"Quicksand", sans-serif',}}}/>
 
       <StyledChartWrapper dir="ltr">
         <ReactApexChart type="donut" series={chartSeries} options={chartOptions} height={280} />
