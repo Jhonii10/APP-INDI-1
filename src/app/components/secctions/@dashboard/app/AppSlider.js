@@ -38,7 +38,7 @@ const AppSlider = () => {
             speed: 1000, // Velocidad de cambio automático en milisegundos
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: false, // Habilitar cambio automático
+            autoplay: true, // Habilitar cambio automático
             autoplaySpeed: 4000, // Intervalo de cambio automático en milisegundos
             arrows: false,
         };
