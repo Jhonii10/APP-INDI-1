@@ -26,12 +26,12 @@ const DashboardApp = () => {
 
                 <Grid2 item xs={12} md={4}>
                 <AppCurrentVisits
-              title="Current Visits"
+              title="Descargas actuales"
               chartData={[
-                { label: 'America', value: 4344 },
-                { label: 'Asia', value: 5435 },
-                { label: 'Europe', value: 1443 },
-                { label: 'Africa', value: 4443 },
+                { label: 'Mac', value: 4344 },
+                { label: 'Windows', value: 5435 },
+                { label: 'Ios', value: 1443 },
+                { label: 'Android', value: 4443 },
               ]}
               chartColors={[
                 theme.palette.primary.main,
@@ -44,8 +44,8 @@ const DashboardApp = () => {
 
 
                 <Grid2 item xs={12} md={8} >
-                <AppWebVisitis title="Website Visits"
-              subheader="(+43%) than last year"
+                <AppWebVisitis title="Área instalada"
+              subheader="(+43%) que el año pasado"
               chartLabels={[
                 '01/01/2023',
                 '02/01/2023',
@@ -81,21 +81,7 @@ const DashboardApp = () => {
                 
 
 
-                <Grid2 item xs={12} sm={6} md={4} sx={{padding:1}}>
-                <div>Item 1</div>            
-                </Grid2>
-
-                <Grid2 item xs={12} sm={6} md={8}>
-                <div>Item 1</div>              
-                </Grid2>
-
-                <Grid2 item xs={12} sm={6} md={4} sx={{padding:1}}>
-                <div>Item 1</div>            
-                </Grid2>
-
-                <Grid2 item xs={12} sm={6} md={8}>
-                <div>Item 1</div>              
-                </Grid2>
+              
     
     
              </Grid2>

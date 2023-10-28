@@ -38,7 +38,7 @@ const AppSlider = () => {
             speed: 1000, // Velocidad de cambio automático en milisegundos
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true, // Habilitar cambio automático
+            autoplay: false, // Habilitar cambio automático
             autoplaySpeed: 4000, // Intervalo de cambio automático en milisegundos
             arrows: false,
         };
@@ -49,18 +49,18 @@ const AppSlider = () => {
 
         const slidesData = [
             {
-            title: "10 Essential Tips for Healthy Living",
-            description:'The sun slowly set over the horizon, painting the sky in vibrant hues of orange and pink.',
+            title: "10 Explorando las gemas ocultas de [Destino]",
+            description:'El viejo roble se alzaba alto y majestuoso, sus ramas se mecían suavemente con la brisa.',
             image: "https://api-prod-minimal-v510.vercel.app/assets/images/cover/cover_3.jpg",
             },
             {
-            title: "10 Essential Tips for Healthy Living",
-            description:'The sun slowly set over the horizon, painting the sky in vibrant hues of orange and pink.',
+            title: "10 Explorando las gemas ocultas de [Destino]",
+            description:'El viejo roble se alzaba alto y majestuoso, sus ramas se mecían suavemente con la brisa.',
             image: "https://api-prod-minimal-v510.vercel.app/assets/images/cover/cover_2.jpg",
             },
             {
-            title: "10 Essential Tips for Healthy Living",
-            description:'The sun slowly set over the horizon, painting the sky in vibrant hues of orange and pink.',
+            title: "10 Explorando las gemas ocultas de [Destino]",
+            description:'El viejo roble se alzaba alto y majestuoso, sus ramas se mecían suavemente con la brisa.',
             image: "https://api-prod-minimal-v510.vercel.app/assets/images/cover/cover_1.jpg",
             },
         ];
@@ -75,14 +75,36 @@ const AppSlider = () => {
             <>
             <Box key={index} sx={{position:'relative'}}>
 
-            <Stack spacing={2} sx={{position:'absolute' , display:'flex',gap:'2px', p:'24px', width:'100%',bottom:'0px', zIndex:'9', textAlign:'left', color:'rgb(255, 255, 255)'}}>
+            <Stack  
+                sx={{ 
+                    position:'absolute' ,
+                    display:'flex',
+                    gap:'8px',
+                    p:'24px',
+                    width:'100%',
+                    bottom:'0px',
+                    zIndex:'9',
+                    textAlign:'left',
+                    color:'rgb(255, 255, 255)',
+                    '& *':{fontFamily:'"Quicksand", sans-serif',}
+                    }}>
                 <Typography variant="overline" color="rgb(104, 205, 249)">
                     Featured App
                 </Typography>
-                <Typography variant="h5" color="white">
+                <Typography  component='a' variant="inherit" color="white">
+                <Typography variant='h5' 
+                 sx={{
+                    fontFamily:'"Quicksand", sans-serif',
+                    overflow:'hidden',
+                    textOverflow:'ellipsis',
+                    whiteSpace:'nowrap',
+
+
+                 }}>
                     {slide.title}
                 </Typography>
-                <Typography variant="body2" color="white">
+                </Typography>
+                <Typography component='p' variant="body2" color="white">
                     {slide.description}
                 </Typography>
             </Stack>

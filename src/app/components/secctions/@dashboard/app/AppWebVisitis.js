@@ -121,8 +121,8 @@ const AppWebVisitis = ({ title, subheader, chartLabels, chartData, ...other }) =
         )
 
     return (
-        <Card {...other}>
-        <CardHeader title={title} subheader={subheader} sx={{textAlign:'left', padding:'24px 24px 0px'}} action={[year(selectionYear)]}/>
+        <Card {...other} sx={{'& *':{ fontFamily:'"Quicksand", sans-serif !important'}}}>
+        <CardHeader title={title} subheader={subheader} sx={{ '& span:first-child':{fontWeight:'700' ,fontSize:'1.125rem'} ,textAlign:'left', padding:'24px 24px 0px'}} action={[year(selectionYear)]}/>
   
         <Box sx={{ p: 3, pb: 1 }} dir="ltr">
           <ReactApexChart  type="line" series={chartData} options={chartOptions} height={364} />

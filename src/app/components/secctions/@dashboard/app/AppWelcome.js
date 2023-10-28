@@ -11,36 +11,64 @@ const AppWelcome = () => {
         <>
         <Stack 
             direction={{xs:'column', md:'row'}}
+            height={{md:'100%'}}
             sx={{
                 background:'linear-gradient(135deg, rgba(104, 205, 249, 0.2), rgba(7, 141, 238, 0.2)) rgb(255, 255, 255)',
                 borderRadius:'16px',
                 position:'relative',
-                color:'rgb(1, 41, 114)'
+                color:'rgb(1, 41, 114)',
+                
                 
             }}
-            height={'100%'}
+            
         >
           <Stack
            
            sx={{
-                p:4,
-                alignItems:{md:'flex-start',sm:'center'}, 
+                p:{md:'40px', xs:'40px 24px 0px'},
+                alignItems:{md:'flex-start',xs:'center'}, 
                 textAlign:{md:'left', sm:'center'}, 
                 justifyContent:'center',
-                gap:'12px'
+                '& *':{fontFamily:'"Quicksand", sans-serif',}
+                
                 }}>
-            <Typography variant="h4">
-              Welcome back <br/>👋 {displayName}
+            <Typography variant="h4" 
+             sx={{
+                fontSize:{xs:'1.25rem', md:'1.6rem'},
+                margin:'0px 0px 16px',
+                fontWeight:'700',
+                lineHeight:1.5,
+                fontFamily:'"Quicksand", sans-serif',
+                whiteSpace:'pre-line'
+                
+            }}>
+              Bienvenido de nuevo 👋 {displayName}
             </Typography>
-            <Typography variant="body2">
-              If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything.
+            <Typography variant="body2" sx={{
+                marginBottom:{xs:'24px'},
+                opacity:'0.8'
+
+            }}>
+            Si vas a utilizar un pasaje de Lorem Ipsum, debes asegurarte de que no haya nada.
             </Typography>
-            <Button variant="button"  color="primary" size="medium">
-              Go Now
+            <Button variant="button" 
+                sx={{ 
+                    color:'rgb(255, 255, 255)',
+                    backgroundColor:'rgb(7, 141, 238)',
+                    boxShadow:'none',
+                    fontWeight:'700',
+                    fontFamily:'"Quicksand", sans-serif',
+                    padding:'6px 12px',
+                    borderRadius:'8px',
+                    '&:hover': {  
+                     backgroundColor: 'rgb(0, 60, 171)', 
+                     },
+                }}>
+              Ve ahora      
             </Button>
           </Stack>
         
-        <Stack component={'span'}  sx={{ width:'100%', maxWidth:'360px', p:{xs:'40px', } , '& * path':{background:'red', color:'blue'}, marginLeft:'auto', marginRight:'auto'}}> 
+        <Stack component={'span'}  sx={{ maxWidth:'360px', p:{md:'24px', xs:'40px' } , '& svg':{width:'100%', height:'100%'}, marginLeft:'auto', marginRight:'auto'}}> 
          
         <svg
   className="MuiBox-root css-uwwqev"
