@@ -69,7 +69,7 @@ const Sidebar = ({draweWidth, openNav, onCloseNav}) => {
                     <Avatar src={account.photoURL} alt="photoURL" />
 
                     <Box sx={{ ml: 2 }}>
-                    <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
+                    <Typography variant="subtitle2" sx={{ color: 'text.primary', fontFamily:'"Quicksand", sans-serif' , fontWeight:'700'}}>
                         {displayName}
                     </Typography>
                     </Box>
