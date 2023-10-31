@@ -31,6 +31,11 @@ function NavItem({ item }) {
             bgcolor: 'rgba(7, 141, 238, 0.08)',
             fontWeight: 'fontWeightBold',
           },
+          '& *':{
+            fontFamily:'"Quicksand", sans-serif '
+          }
+          
+          ,
         }}
       >
         <StyledNavItemIcon>{icon && icon}</StyledNavItemIcon>
