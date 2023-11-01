@@ -6,6 +6,7 @@ import AppSlider from '../components/secctions/@dashboard/app/AppSlider';
 import AppWebVisitis from '../components/secctions/@dashboard/app/AppWebVisitis';
 import AppCurrentVisits from '../components/secctions/@dashboard/app/AppCurrentVisits';
 import { useTheme } from '@mui/material/styles';
+import AppStatistics from '../components/secctions/@dashboard/app/AppStatistics';
 
 const DashboardApp = () => {
     const theme = useTheme();
@@ -22,6 +23,28 @@ const DashboardApp = () => {
 
                 <Grid2 item xs={12}  md={4} >
                 <AppSlider />             
+                </Grid2>
+
+                <Grid2 item xs={12} md={4} >
+                  <AppStatistics 
+                     title={'total usuarios activos'}
+                     porcentaje={'+2,6%'}
+                     valores={'18765'}
+                   />
+                </Grid2>
+                <Grid2 item xs={12} md={4} >
+                  <AppStatistics 
+                     title={'total instalado'}
+                     porcentaje={'+0,2%'}
+                     valores={'4876'}
+                   />
+                </Grid2>
+                <Grid2 item xs={12} md={4} >
+                  <AppStatistics 
+                     title={'Descargas totales'}
+                     porcentaje={'-0.1%'}
+                     valores={'678'}
+                   />
                 </Grid2>
 
                 <Grid2 item xs={12} md={4}>
@@ -77,6 +100,7 @@ const DashboardApp = () => {
                 
               ]}/>             
                 </Grid2>
+              
                 
                 
 
