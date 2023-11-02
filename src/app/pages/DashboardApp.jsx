@@ -27,15 +27,15 @@ const DashboardApp = () => {
 
                 <Grid2 item xs={12} md={4} >
                   <AppStatistics 
-                     title={'total usuarios activos'}
-                     porcentaje={'+2,6%'}
+                     title={'Total usuarios activos'}
+                     porcentaje={'+2.6%'}
                      valores={'18765'}
                    />
                 </Grid2>
                 <Grid2 item xs={12} md={4} >
                   <AppStatistics 
-                     title={'total instalado'}
-                     porcentaje={'+0,2%'}
+                     title={'Total instalado'}
+                     porcentaje={'+0.2%'}
                      valores={'4876'}
                    />
                 </Grid2>
