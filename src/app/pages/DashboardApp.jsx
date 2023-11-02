@@ -30,6 +30,8 @@ const DashboardApp = () => {
                      title={'Total usuarios activos'}
                      porcentaje={'+2.6%'}
                      valores={'18765'}
+                     charDate={[5,18,12,51,68,11,39,37,27,20]}
+                     colorColumn={'rgb(66, 153, 225)'}
                    />
                 </Grid2>
                 <Grid2 item xs={12} md={4} >
@@ -37,6 +39,8 @@ const DashboardApp = () => {
                      title={'Total instalado'}
                      porcentaje={'+0.2%'}
                      valores={'4876'}
+                     charDate={[20,41,63,33,28,35,50,46,11,26]}
+                     colorColumn={'#39bad5'}
                    />
                 </Grid2>
                 <Grid2 item xs={12} md={4} >
@@ -44,6 +48,8 @@ const DashboardApp = () => {
                      title={'Descargas totales'}
                      porcentaje={'-0.1%'}
                      valores={'678'}
+                     charDate={[8,9,31,8,16,37,8,33,46,31]}
+                     colorColumn={'#efb333'}
                    />
                 </Grid2>
 
