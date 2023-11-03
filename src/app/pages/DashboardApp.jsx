@@ -7,6 +7,7 @@ import AppWebVisitis from '../components/secctions/@dashboard/app/AppWebVisitis'
 import AppCurrentVisits from '../components/secctions/@dashboard/app/AppCurrentVisits';
 import { useTheme } from '@mui/material/styles';
 import AppStatistics from '../components/secctions/@dashboard/app/AppStatistics';
+import AppTableNewFact from '../components/secctions/@dashboard/app/AppTableNewFact';
 
 const DashboardApp = () => {
     const theme = useTheme();
@@ -108,7 +109,9 @@ const DashboardApp = () => {
                 </Grid2>
               
                 
-                
+                <Grid2 item xs={12} md={8} >
+                  <AppTableNewFact/>
+                </Grid2>
 
 
               
