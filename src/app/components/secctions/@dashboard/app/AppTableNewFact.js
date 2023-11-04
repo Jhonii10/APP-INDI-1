@@ -85,7 +85,7 @@ const AppTableNewFact = () => {
                     padding:'16px',
                     textAlign:'right'
                 }}>
-                    <ButtonBase>
+                    <ButtonBase sx={{height:'30px', fontSize:'14px',p:'4px', fontWeight:700,fontFamily:'"Quicksand", sans-serif','& .css-vr1fd5':{width:'18px', height:'18px', marginLeft:'1px' }}} >
                       <Typography variant='font'>
                         Ver Todo
                       </Typography>
@@ -102,12 +102,12 @@ const AppTableNewFact = () => {
 export default AppTableNewFact;
 
 
-const icon = (name) => <SvgColor src={`/assets/icons/accesories/${name}.svg`} sx={{ }}/>;
+const icon = (name) => <SvgColor src={`/assets/icons/accesories/${name}.svg`} />;
 
 const NewFactu = ({factura, categoria, precio, estado})=>{
     
-    const validacionEstado = estado.trim()
-    console.log(validacionEstado)
+    const validacionEstado = estado.trim();
+
     return(
         <>
         <TableRow
@@ -137,11 +137,15 @@ const NewFactu = ({factura, categoria, precio, estado})=>{
                 {estado}
              </Box>
             </TableCell>
-          <TableCell align='center'>
-            <ButtonBase>
-                {icon('ic_points_options')}
-            </ButtonBase>
-          </TableCell>
+            <TableCell align='center'>
+                <ButtonBase sx={{
+                    color:'rgb(99, 115, 129)',
+                    borderRadius:'50%',
+                    padding:'8px'
+                    }}>
+                    {icon('ic_points_options')}
+                </ButtonBase>
+            </TableCell>
         </TableRow>
 
         </>
