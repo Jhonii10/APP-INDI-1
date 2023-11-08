@@ -1,6 +1,29 @@
-import { Box, ButtonBase, Card, CardHeader, Paper, Popover, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { Box, ButtonBase, Card, CardHeader, Divider, MenuItem, Paper, Popover, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import SvgColor from '../../../svg-colors/SvgColor';
+import Iconify from '../../../iconify/Iconify';
+
+
+const OPTIONDATEFACT = [
+    {
+        name:'Descargar',
+        url:'eva:cloud-download-fill'
+    },
+    {
+        name:'Imprimir',
+        url:'solar:printer-minimalistic-bold'
+    },
+    {
+        name:'Compartir',
+        url:'ic:sharp-share'
+    },
+    {
+        name:'Eliminar',
+        url:'fluent:delete-24-filled'
+    }
+]
+
+const icon = (name) => <SvgColor src={`/assets/icons/accesories/${name}.svg`} />;
 
 const AppTableNewFact = () => {
 
@@ -102,7 +125,7 @@ const AppTableNewFact = () => {
 export default AppTableNewFact;
 
 
-const icon = (name) => <SvgColor src={`/assets/icons/accesories/${name}.svg`} />;
+
 
 const NewFactu = ({factura, categoria, precio, estado})=>{
     
@@ -164,18 +187,14 @@ const NewFactu = ({factura, categoria, precio, estado})=>{
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
             PaperProps={{
             sx: {
-                p: 0,
+                p: '4px',
                 mt: '-6px',
                 ml: 0.75,
-                width: 160,
-                height:166,
+                width: 150,
                 overflow:'inherit',
                 backdropFilter:'blur(20px)',
                 backgroundColor:'rgba(255, 255, 255, 0.75)',
-                '& .MuiMenuItem-root': {
-                typography: 'body2',
-                borderRadius: 0.75,
-                },
+                borderRadius:'10px'
             },
             }}
             >
@@ -195,9 +214,32 @@ const NewFactu = ({factura, categoria, precio, estado})=>{
                 top:'20px'
 
                }}/>
-             {/* todo: aqui las opciones de cada factura */}
-             opciones de la factura 
-        
+               {
+                OPTIONDATEFACT.map(({name,url}, index)=>{
+                    return (
+                        <>
+                            {index === OPTIONDATEFACT.length - 1 && <Divider   sx={{borderWidth:'0px 0px thin',borderColor:'rgba(145, 158, 171, 0.2)', borderStyle:'dashed'}}/>}
+                            <MenuItem 
+                                key={index}
+                                sx={{
+                                    padding:'6px 8px',
+                                    borderRadius:'6px',
+                                    fontFamily:'"Quicksand", sans-serif',
+                                    ...(index === OPTIONDATEFACT.length - 1 && {color:'rgb(255, 86, 48)', '& svg':{color:'rgb(255, 86, 48)'}}),
+                                    ...(!(index === OPTIONDATEFACT.length - 1) &&{marginBottom:'4px'}),
+                                    fontSize:'0.875rem',
+                                    fontWeight:'500'
+                                    
+                                }}
+                                onClick={handleClose}
+                                >
+                                    
+                                    <Iconify icon={url} sx={{marginRight:'6px', }}/>
+                                    {name}
+                            </MenuItem>
+                        </>)
+                })
+               }
             </Popover>
             </TableCell>
         </TableRow>
@@ -205,3 +247,5 @@ const NewFactu = ({factura, categoria, precio, estado})=>{
         </>
     )
 }
+
+
