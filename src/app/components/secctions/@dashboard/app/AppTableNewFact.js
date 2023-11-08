@@ -1,5 +1,5 @@
-import { Box, ButtonBase, Card, CardHeader, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
-import React from 'react';
+import { Box, ButtonBase, Card, CardHeader, Paper, Popover, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import React, { useState } from 'react';
 import SvgColor from '../../../svg-colors/SvgColor';
 
 const AppTableNewFact = () => {
@@ -107,6 +107,15 @@ const icon = (name) => <SvgColor src={`/assets/icons/accesories/${name}.svg`} />
 const NewFactu = ({factura, categoria, precio, estado})=>{
     
     const validacionEstado = estado.trim();
+    const [open, setOpen] = useState(null);
+
+    const handleOpen = (event) => {
+        setOpen(event.currentTarget);
+      };
+    
+      const handleClose = () => {
+        setOpen(null);
+      };
 
     return(
         <>
@@ -142,9 +151,54 @@ const NewFactu = ({factura, categoria, precio, estado})=>{
                     color:'rgb(99, 115, 129)',
                     borderRadius:'50%',
                     padding:'8px'
-                    }}>
+                    }}
+                    onClick={handleOpen}
+                    >
                     {icon('ic_points_options')}
                 </ButtonBase>
+                <Popover
+            open={Boolean(open)}
+            anchorEl={open}
+            onClose={handleClose}
+            anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            PaperProps={{
+            sx: {
+                p: 0,
+                mt: '-6px',
+                ml: 0.75,
+                width: 160,
+                height:166,
+                overflow:'inherit',
+                backdropFilter:'blur(20px)',
+                backgroundColor:'rgba(255, 255, 255, 0.75)',
+                '& .MuiMenuItem-root': {
+                typography: 'body2',
+                borderRadius: 0.75,
+                },
+            },
+            }}
+            >
+            <Typography 
+               component={'span'}
+               sx={{
+                width:14,
+                height:14,
+                position:'absolute',
+                borderBottomLeftRadius:'3.5px',
+                clipPath:'polygon(0% 0%, 100% 100%, 0% 100%)',
+                border:'1px solid rgba(145, 158, 171, 0.12)',
+                backgroundColor:'rgba(255, 255, 255, 0.8)',
+                backdropFilter:'blur(6px)',
+                right:'-6.5px',
+                transform:'rotate(-135deg)',
+                top:'20px'
+
+               }}/>
+             {/* todo: aqui las opciones de cada factura */}
+             opciones de la factura 
+        
+            </Popover>
             </TableCell>
         </TableRow>
 
