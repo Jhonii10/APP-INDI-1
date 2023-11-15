@@ -9,6 +9,7 @@ import { useTheme } from '@mui/material/styles';
 import AppStatistics from '../components/secctions/@dashboard/app/AppStatistics';
 import AppTableNewFact from '../components/secctions/@dashboard/app/AppTableNewFact';
 import AppTopInstalledCountries from '../components/secctions/@dashboard/app/AppTopInstalledCountries';
+import AppTopAuthors from '../components/secctions/@dashboard/app/AppTopAuthors';
 
 const DashboardApp = () => {
     const theme = useTheme();
@@ -117,6 +118,11 @@ const DashboardApp = () => {
                 <Grid2 item xs={12} md={4}>
                   <AppTopInstalledCountries title={'Principales paises instalados'}/>
                 </Grid2>
+
+                <Grid2 item xs={12} md={4}>
+                  <AppTopAuthors/>
+                </Grid2>
+
 
 
               
