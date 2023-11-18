@@ -32,10 +32,23 @@ const AppTopAuthors = () => {
                     },
                     {
                         name:'Lusian Obrien',
-                        likes:'1,95k',
+                        likes:'3,95k',
                         color:'rgb(255, 86, 48)',
                         backgroundColor:'rgba(255, 86, 48, 0.08)'
                     },
+                    {
+                        name:'Chris Bailey',
+                        likes:'2,15k',
+                        color:'rgb(50 255 48)',
+                        backgroundColor:'rgb(49 255 48 / 8%)'
+                    },
+                    {
+                        name:'Shane Corwin',
+                        likes:'1,75k',
+                        color:'rgb(242 219 0)',
+                        backgroundColor:'rgba(255, 235, 48, 0.08)'
+                    },
+                    
 
                 ].map((date,index)=>(
                     <Stack sx={{
