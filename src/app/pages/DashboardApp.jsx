@@ -116,11 +116,12 @@ const DashboardApp = () => {
                 </Grid2>
 
                 <Grid2 item xs={12} md={4}>
-                  <AppTopInstalledCountries title={'Principales paises instalados'}/>
+                <AppTopAuthors/>
                 </Grid2>
 
                 <Grid2 item xs={12} md={6}>
-                  <AppTopAuthors/>
+                  
+                  <AppTopInstalledCountries title={'Principales paises instalados'}/>
                 </Grid2>
 
 
