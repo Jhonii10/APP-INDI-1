@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container, Stack } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import React from 'react';
 import AppWelcome from '../components/secctions/@dashboard/app/AppWelcome';
@@ -10,6 +10,7 @@ import AppStatistics from '../components/secctions/@dashboard/app/AppStatistics'
 import AppTableNewFact from '../components/secctions/@dashboard/app/AppTableNewFact';
 import AppTopInstalledCountries from '../components/secctions/@dashboard/app/AppTopInstalledCountries';
 import AppTopAuthors from '../components/secctions/@dashboard/app/AppTopAuthors';
+import AppPercentageStatistics from '../components/secctions/@dashboard/app/AppPercentageStatistics';
 
 const DashboardApp = () => {
     const theme = useTheme();
@@ -122,6 +123,21 @@ const DashboardApp = () => {
                 <Grid2 item xs={12} md={6}>
                   
                   <AppTopInstalledCountries title={'Principales paises instalados'}/>
+                </Grid2>
+                <Grid2 item xs={12} md={6}>
+                 <Stack 
+                    sx={{
+                      display:'flex',
+                      flexDirection:'column',
+                      gap:'24px'
+
+                    }}
+                 >
+                  <AppPercentageStatistics number={38.566} name={'Conversion'} icon={'solar:user-bold'}/>
+                  <AppPercentageStatistics number={55.556} name={'Aplicaciones'} icon={'mdi:email'}/>
+                 </Stack>
+                  
+                  
                 </Grid2>
 
 
