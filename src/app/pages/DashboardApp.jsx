@@ -133,8 +133,8 @@ const DashboardApp = () => {
 
                     }}
                  >
-                  <AppPercentageStatistics number={38.566} name={'Conversion'} icon={'solar:user-bold'} colorB={'rgb(3 81 171)'}/>
-                  <AppPercentageStatistics number={55.556} name={'Aplicaciones'} icon={'mdi:email'} colorB={'rgb(0, 108, 156)'}/>
+                <AppPercentageStatistics number={'38,566'} name={'Conversion'} icon={'solar:user-bold'} colorB={'rgb(3 81 171)'} porcentaje={48}/>
+                  <AppPercentageStatistics number={'55,556'} name={'Aplicaciones'} icon={'mdi:email'} colorB={'rgb(0, 108, 156)'}  porcentaje={75}/>
                  </Stack>
                   
                   

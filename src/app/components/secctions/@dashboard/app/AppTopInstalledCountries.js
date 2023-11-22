@@ -14,7 +14,6 @@ const AppTopInstalledCountries = ({title}) => {
                             [
                                 {countri:'Alemania', flags: 'emojione-v1:flag-for-germany'},
                                 {countri:'Argentina', flags: 'emojione-v1:flag-for-argentina'},
-                                {countri:'Francia', flags: 'emojione-v1:flag-for-france'},
                                 {countri:'Colombia', flags: 'emojione-v1:flag-for-colombia'},
                                 {countri:'EE.UU', flags: 'emojione-v1:flag-for-united-states'},
                                 {countri:'Mexico', flags: 'emojione-v1:flag-for-mexico'},
