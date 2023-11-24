@@ -1,11 +1,6 @@
 import ReactApexChart from 'react-apexcharts';
-// @mui
 import { useTheme, styled } from '@mui/material/styles';
 import { Card, CardHeader } from '@mui/material';
-// utils
-
-// components
-
 import { fNumber } from '../../../../utils/formatNumber';
 import { useChart } from '../../../chart';
 
@@ -29,9 +24,6 @@ const StyledChartWrapper = styled('div')(({ theme }) => ({
     top: `calc(${CHART_HEIGHT - LEGEND_HEIGHT}px) !important`,
   },
 }));
-
-// ----------------------------------------------------------------------
-
 
 
 
@@ -60,21 +52,22 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
     plotOptions: {
       pie: {
         donut: {
-          size: '90%', // Adjust the size here, e.g., '70%' for a smaller donut chart
+          size: '90%', 
           labels: {
             show: true,
             total: {
               show: true,
-              label: 'Total', // Customize the label for the total
-              color: 'black', // Change the color of the total label
+              label: 'Total',
+              color: 'black', 
               formatter: function (w) {
-                // Customize the format of the total label
                 return fNumber(chartSeries.reduce((a, b) => a + b, 0));
               },
               
+              
             },
             value: {
-              fontSize: '24px', // Adjust the font size here to make the result label smaller
+              fontSize: '24px',
+              fontFamily:'"Quicksand", sans-serif'
             },
           },
         },
@@ -83,12 +76,19 @@ export default function AppCurrentVisits({ title, subheader, chartColors, chartD
   });
 
   return (
-    <Card {...other} sx={{'& *':{ fontFamily:'"Quicksand", sans-serif !important'}}}>
-      <CardHeader title={title} subheader={subheader} sx={{'& *':{textAlign:'left', fontWeight:'700 !important' ,fontSize:'1.2rem !important', fontFamily:'"Quicksand", sans-serif',}}}/>
+    <Card 
+        {...other} 
+      >
+      <CardHeader 
+        title={title} 
+        subheader={subheader} 
+        sx={{'& span ':{textAlign:'left', fontWeight:'700' ,fontSize:'1.2rem ', fontFamily:'"Quicksand", sans-serif',}}}
 
-      <StyledChartWrapper dir="ltr">
-        <ReactApexChart type="donut" series={chartSeries} options={chartOptions} height={280} />
-      </StyledChartWrapper>
+      />
+
+        <StyledChartWrapper dir="ltr">
+           <ReactApexChart type="donut" series={chartSeries} options={chartOptions} height={280} />
+        </StyledChartWrapper>
     </Card>
   );
 }
