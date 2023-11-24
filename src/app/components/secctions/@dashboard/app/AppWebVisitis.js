@@ -7,8 +7,10 @@ import SvgColor from '../../../svg-colors/SvgColor';
 
 const AppWebVisitis = ({ title, subheader, chartLabels, chartData, ...other }) => {
 
+    const YEAR = ['2022','2023'];
     const [open, setOpen] = useState(null);
-    const [selectionYear, setSetselectionYear] = useState('2022');
+    const [selectionYear, setSetselectionYear] = useState(YEAR[0]);
+
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
@@ -43,7 +45,7 @@ const AppWebVisitis = ({ title, subheader, chartLabels, chartData, ...other }) =
         },
       });
 
-    const YEAR = ['2022','2023'];
+    
 
     const icon = (name) => <SvgColor src={`/assets/icons/accesories/${name}.svg`} sx={{ width: '16px', height: '16px' }}/>;
 

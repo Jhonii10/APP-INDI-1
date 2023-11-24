@@ -4,11 +4,7 @@ import ReactApexChart from 'react-apexcharts';
 import SvgColor from '../../../svg-colors/SvgColor';
 
 const AppStatistics = ({porcentaje, title , valores, charDate, colorColumn}) => {
-
-    const validacion = parseFloat(porcentaje)
-    console.log(validacion);
-
-    
+ 
     const chartOptions = {
         chart: {
           type: 'bar',
