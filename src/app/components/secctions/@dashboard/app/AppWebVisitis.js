@@ -9,7 +9,9 @@ const AppWebVisitis = ({ title, subheader, chartLabels, chartData, ...other }) =
 
     const YEAR = ['2022','2023'];
     const [open, setOpen] = useState(null);
-    const [selectionYear, setSetselectionYear] = useState(YEAR[0]);
+    const [selectionYear, setSetselectionYear] = useState(YEAR[1]);
+
+    const [chartDate] = useState(chartData)
 
 
   const handleOpen = (event) => {
@@ -28,7 +30,7 @@ const AppWebVisitis = ({ title, subheader, chartLabels, chartData, ...other }) =
 
     const chartOptions = useChart({
         plotOptions: { bar: { columnWidth: '16%' } },
-        fill: { type: chartData.map((i) => i.fill) },
+        fill: { type: chartDate[selectionYear].map((i) => i.fill) },
         labels: chartLabels,
         xaxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep','Oct','Nov','Dec']},
         tooltip: {
@@ -127,7 +129,7 @@ const AppWebVisitis = ({ title, subheader, chartLabels, chartData, ...other }) =
         <CardHeader title={title} subheader={subheader} sx={{ '& span:first-child':{fontWeight:'700' ,fontSize:'1.125rem'} ,textAlign:'left', padding:'24px 24px 0px'}} action={[year(selectionYear)]}/>
   
         <Box sx={{ p: 3, pb: 1 }} dir="ltr">
-          <ReactApexChart  type="line" series={chartData} options={chartOptions} height={364} />
+          <ReactApexChart  type="line" series={chartDate[selectionYear]} options={chartOptions} height={364} />
         </Box>
       </Card>
     );

@@ -93,22 +93,36 @@ const DashboardApp = () => {
                 '11/01/2023',
                 '12/01/2023',
               ]}
-              chartData={[
-                
-                {
-                  name: 'Asia',
-                  type: 'line',
-                  fill: 'solid',
-                  data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 35, 51,49],
-                },
-                {
-                  name: 'America',
-                  type: 'line',
-                  fill: 'solid',
-                  data: [10, 34, 13, 56, 77, 88, 99, 77, 45, 13, 56,77],
-                },
-                
-              ]}/>             
+              chartData={{
+                '2022': [
+                  {
+                    name: 'Asia',
+                    type: 'line',
+                    fill: 'solid',
+                    data: [10, 41, 35, 40, 49, 62, 69, 91, 148, 35, 51, 49],
+                  },
+                  {
+                    name: 'America',
+                    type: 'line',
+                    fill: 'solid',
+                    data: [10, 34, 13, 56, 77, 88, 99, 77, 45, 13, 56, 77],
+                  },
+                ],
+                '2023': [
+                  {
+                    name: 'Asia',
+                    type: 'line',
+                    fill: 'solid',
+                    data: [51, 35, 41, 10, 91, 69, 62, 148, 91, 69, 62],
+                  },
+                  {
+                    name: 'America',
+                    type: 'line',
+                    fill: 'solid',
+                    data: [56, 13, 34, 10, 77, 99, 88, 45, 77, 99, 82 ],
+                  },
+                ],
+              }}/>             
                 </Grid2>
               
                 
