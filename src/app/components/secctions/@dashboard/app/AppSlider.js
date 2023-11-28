@@ -39,7 +39,7 @@ const AppSlider = () => {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true, // Habilitar cambio automático
-            autoplaySpeed: 4000, // Intervalo de cambio automático en milisegundos
+            autoplaySpeed: 3000, // Intervalo de cambio automático en milisegundos
             arrows: false,
         };
 
@@ -137,6 +137,44 @@ const AppSlider = () => {
             <PrevArrow />
             <NextArrow />
             </Stack>
+
+            <Box component={'ul'} 
+                sx={{
+                    zIndex:'9',
+                    display:'flex',
+                    alignItems:'center',
+                    justifyContent:'center',
+                    top:'16px',
+                    left:'16px',
+                    position:'absolute',
+                    color:'rgb(104, 205, 249)',
+                    '& li':{width:'18px', height:'18px', opacity:'0.32', cursor:'pointer'}
+
+                }}
+            >
+                 {
+                    slidesData.map((slide, index) => (
+                        <li>
+                        <Stack sx={{
+                            alignItems:'center',
+                            justifyContent:'center',
+                            width:'100%',
+                            height:'100%'
+                        }}>
+                            <Typography sx={{
+                                width:'8px',
+                                height:'8px',
+                                borderRadius:'50%',
+                                transition:'width 250ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
+                                backgroundColor:'currentcolor'
+                            }}/>
+                        </Stack>
+
+                        </li>
+                        ))
+                 }
+
+            </Box>
 
             </Card>
         </>
