@@ -21,6 +21,7 @@ const StyledAccount = styled('div')(({ theme }) => ({
     backgroundColor: alpha(theme.palette.grey[500], 0.12),
   }));
 
+  
   const account = {
     displayName: 'Jaydon Frankie',
     email: 'demo@minimals.cc',
@@ -72,18 +73,43 @@ const Sidebar = ({draweWidth, openNav, onCloseNav, onToggleDrawerWidth}) => {
 
              }}
              >
-               <Iconify icon={ collapsed ?'iconamoon:arrow-right-2-light':'iconamoon:arrow-left-2-light'} sx={{width:'16px', height:'16px'}}/>
+               <Iconify 
+                  icon={ collapsed 
+                        ?'iconamoon:arrow-right-2-light'
+                        :'iconamoon:arrow-left-2-light'
+                    } 
+                  sx={{
+                        width:'16px',
+                        height:'16px'
+                    }}/>
             </IconButton>
 
             <Divider/>
 
-            <Box sx={{ mb: 5, mx: 2.5, mt:2 }}>
+            <Box sx={{ 
+                    mb: draweWidth === 88 ? 1 : 3, 
+                    mx:  draweWidth === 88 ? 1: 2.5, 
+                    mt: draweWidth === 88 ? 1: 2, 
+                }}>
                 <Link underline="none">
-                <StyledAccount>
+                <StyledAccount sx={{
+                    flexDirection: draweWidth === 88 ? 'column':'row',
+
+                }}>
                     <Avatar src={account.photoURL} alt="photoURL" />
 
-                    <Box sx={{ ml: 2 }}>
-                    <Typography variant="subtitle2" sx={{ color: 'text.primary', fontFamily:'"Quicksand", sans-serif' , fontWeight:'700'}}>
+                    <Box sx={{ ml:draweWidth === 88 ? 0 : 1 }}>
+                    <Typography 
+                        variant="subtitle2" 
+                        sx={{ 
+                            color: 'text.primary',
+                            fontFamily:'"Quicksand", sans-serif' ,
+                            fontWeight:'700',
+                            ...(draweWidth === 88 && {
+                                lineHeight:'2.2',
+                                fontSize:'0.76rem',
+                            }),
+                            }}>
                         {displayName}
                     </Typography>
                     </Box>
@@ -91,8 +117,8 @@ const Sidebar = ({draweWidth, openNav, onCloseNav, onToggleDrawerWidth}) => {
                 </Link>
             </Box>
 
-            <ScrollBar>
-                <NavSetion data={navConfig}/>
+            <ScrollBar >
+                <NavSetion data={navConfig} draweWidth={draweWidth}/>
             </ScrollBar>
 
             </>
@@ -104,7 +130,7 @@ const Sidebar = ({draweWidth, openNav, onCloseNav, onToggleDrawerWidth}) => {
             component={'nav'}
             sx={{
                 flexShrink: { lg: 0 },
-                width: { lg: collapsed ? '88px' : draweWidth },
+                width: { lg:  draweWidth },
             }}
         >
         {
@@ -114,7 +140,7 @@ const Sidebar = ({draweWidth, openNav, onCloseNav, onToggleDrawerWidth}) => {
           variant="permanent"
           PaperProps={{
             sx: {
-              width: collapsed ? '88px' : draweWidth,
+              width: draweWidth,
               bgcolor: 'background.default',
               borderRightStyle: 'dashed',
             },
