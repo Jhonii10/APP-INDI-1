@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { Avatar, Box, Divider, Drawer, IconButton, Link, Toolbar, Typography, alpha, styled } from "@mui/material";
-import { CloseOutlined } from "@mui/icons-material";
 import { useSelector } from "react-redux";
 import useResponsive from "../hooks/useResponsive";
 import SvgColor from "./svg-colors/SvgColor";
@@ -8,7 +7,8 @@ import ScrollBar from "./scrollbar/ScrollBar";
 import NavSetion from "./sidebar-setions/NavSetion";
 import navConfig from "./sidebar-setions/config";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Iconify from "./iconify/Iconify";
 
 
 const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{width:'30px', height:'30px', backgroundColor:'rgb(7, 141, 238)'}}/>;
@@ -27,11 +27,19 @@ const StyledAccount = styled('div')(({ theme }) => ({
     photoURL: '/assets/images/avatars/avatar_default.jpg',
   };
 
-const Sidebar = ({draweWidth, openNav, onCloseNav}) => {
+const Sidebar = ({draweWidth, openNav, onCloseNav, onToggleDrawerWidth}) => {
 
     const {displayName} = useSelector(state => state.auth)
     const isDesktop = useResponsive('up','lg');
     const { pathname } = useLocation();
+
+    const [collapsed, setCollapsed] = useState(false);
+
+  const toggleSidebarWidth = () => {
+    setCollapsed(!collapsed);
+    onToggleDrawerWidth(!collapsed)
+    
+  };
 
     useEffect(() => {
         if (openNav) {
@@ -49,16 +57,22 @@ const Sidebar = ({draweWidth, openNav, onCloseNav}) => {
             </Toolbar>
 
             <IconButton
-            aria-label="Cerrar"
-            onClick={onCloseNav}
-            sx={{
-            position: 'absolute',
-            top: 12,
-            right: 0,
-            display: {md: 'none'}
-            }}
+            onClick={toggleSidebarWidth}
+             sx={{
+                display:{xs:'none', md:'inline-flex'},
+                position:'fixed',   
+                padding:'4px',
+                top:'50px',
+                left: collapsed ?'74px':'266px',
+                borderRadius:'50%',
+                border:'1px dashed rgba(145, 158, 171, 0.2)',
+                backdropFilter:'blur(6px)',
+                backgroundColor:'rgba(255, 255, 255, 0.48)'
+                
+
+             }}
              >
-            <CloseOutlined />
+               <Iconify icon={ collapsed ?'iconamoon:arrow-right-2-light':'iconamoon:arrow-left-2-light'} sx={{width:'16px', height:'16px'}}/>
             </IconButton>
 
             <Divider/>
@@ -90,7 +104,7 @@ const Sidebar = ({draweWidth, openNav, onCloseNav}) => {
             component={'nav'}
             sx={{
                 flexShrink: { lg: 0 },
-                width: { lg: draweWidth },
+                width: { lg: collapsed ? '88px' : draweWidth },
             }}
         >
         {
@@ -100,7 +114,7 @@ const Sidebar = ({draweWidth, openNav, onCloseNav}) => {
           variant="permanent"
           PaperProps={{
             sx: {
-              width: draweWidth,
+              width: collapsed ? '88px' : draweWidth,
               bgcolor: 'background.default',
               borderRightStyle: 'dashed',
             },

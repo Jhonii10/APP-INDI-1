@@ -26,14 +26,20 @@ const Main = styled('div')(({ theme }) => ({
 
 
 
-const draweWidth = 280;
+ 
 const AppLayout = () => {
+  const [drawerWidth, setDrawerWidth] = useState(280); // Nuevo estado
+  
+
+  const toggleDrawerWidth = () => {
+    setDrawerWidth((prevWidth) => (prevWidth === 280 ? 88 : 280)); // Cambia entre 240 y 88
+  };
 
     const [open, setOpen] = useState(false); 
     return (
         <Box display={'flex'} >
-           <Navbar draweWidth={draweWidth} onOpenNav={() => setOpen(true)} /> 
-           <Sidebar draweWidth={draweWidth} openNav={open} onCloseNav={() => setOpen(false)} />
+           <Navbar draweWidth={drawerWidth} onOpenNav={() => setOpen(true)} /> 
+           <Sidebar draweWidth={drawerWidth} openNav={open} onCloseNav={() => setOpen(false)}  onToggleDrawerWidth={toggleDrawerWidth}/>
            <Main>
             <Outlet/>
             </Main>

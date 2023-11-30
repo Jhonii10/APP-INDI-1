@@ -9,8 +9,9 @@ import SvgColor from './svg-colors/SvgColor';
 
 const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`}/>;
 
-const Navbar = ({draweWidth = 240, onOpenNav }) => {
+const Navbar = ({draweWidth, onOpenNav }) => {
 
+    
 
     return (
         <AppBar
