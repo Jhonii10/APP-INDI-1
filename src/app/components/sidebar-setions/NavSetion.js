@@ -8,7 +8,7 @@ const NavSetion = ({data=[], ...other}) => {
         <Box {...other}>
       <List disablePadding sx={{ p: 1 }}>
         {data.map((item) => (
-          <NavItem key={item.title} item={item} />
+          <NavItem key={item.title} item={item} draweWidth={other.draweWidth} />
         ))}
       </List>
     </Box>
@@ -18,14 +18,13 @@ const NavSetion = ({data=[], ...other}) => {
 export default NavSetion;
 
 
-function NavItem({ item }) {
+function NavItem({ item, draweWidth}) {
     const { title, path, icon, info } = item;
-  
     return (
       <StyledNavItem
         component={RouterLink}
         to={path}
-        sx={{
+        sx={{ 
           '&.active': {
             color: 'rgb(7, 141, 238)',
             bgcolor: 'rgba(7, 141, 238, 0.08)',
@@ -33,7 +32,13 @@ function NavItem({ item }) {
           },
           '& *':{
             fontFamily:'"Quicksand", sans-serif '
-          }
+          },
+          ...(draweWidth === 88 && {
+              display:'flex',
+              flexDirection:'column',
+              fontSize:'10px',
+              mb:1
+          })
           
           ,
         }}
