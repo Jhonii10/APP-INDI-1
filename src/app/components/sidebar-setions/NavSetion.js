@@ -27,11 +27,8 @@ function NavItem({ item, draweWidth}) {
         sx={{ 
           '&.active': {
             color: 'rgb(7, 141, 238)',
-            bgcolor: 'rgba(7, 141, 238, 0.08)',
+            bgcolor: 'action.selected',
             fontWeight: 'fontWeightBold',
-          },
-          '& *':{
-            fontFamily:'"Quicksand", sans-serif '
           },
           ...(draweWidth === 88 && {
               display:'flex',
