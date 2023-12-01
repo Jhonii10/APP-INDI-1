@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar';
 
 import { styled } from '@mui/material/styles';
 import { Outlet } from 'react-router-dom';
+import ThemeProvider from '../themes';
 
 const APP_BAR_MOBILE = 64;
 const APP_BAR_DESKTOP = 90;
@@ -23,20 +24,18 @@ const Main = styled('div')(({ theme }) => ({
     },
   }));
 
-
-
-
  
 const AppLayout = () => {
-  const [drawerWidth, setDrawerWidth] = useState(280); // Nuevo estado
+  const [drawerWidth, setDrawerWidth] = useState(280); 
   
 
   const toggleDrawerWidth = () => {
-    setDrawerWidth((prevWidth) => (prevWidth === 280 ? 88 : 280)); // Cambia entre 240 y 88
+    setDrawerWidth((prevWidth) => (prevWidth === 280 ? 88 : 280)); 
   };
 
     const [open, setOpen] = useState(false); 
     return (
+      <ThemeProvider>
         <Box display={'flex'} >
            <Navbar draweWidth={drawerWidth} onOpenNav={() => setOpen(true)} /> 
            <Sidebar draweWidth={drawerWidth} openNav={open} onCloseNav={() => setOpen(false)}  onToggleDrawerWidth={toggleDrawerWidth}/>
@@ -45,6 +44,7 @@ const AppLayout = () => {
             </Main>
             
         </Box>
+        </ThemeProvider>
     );
 }
 
