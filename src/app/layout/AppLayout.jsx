@@ -8,7 +8,7 @@ import { Outlet } from 'react-router-dom';
 import ThemeProvider from '../themes';
 
 const APP_BAR_MOBILE = 64;
-const APP_BAR_DESKTOP = 90;
+const APP_BAR_DESKTOP = 64;
 
 
 const Main = styled('div')(({ theme }) => ({
