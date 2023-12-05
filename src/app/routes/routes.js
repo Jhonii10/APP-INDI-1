@@ -4,6 +4,7 @@ import CubikaApp from '../pages/CubikaApp';
 import DashboardApp from '../pages/DashboardApp';
 import UserPage from '../pages/UserPage';
 import ProductsPage from '../pages/ProductsPage';
+import BlogPage from '../pages/BlogPage';
 
 // ----------------------------------------------------------------------
 
@@ -18,7 +19,7 @@ export default function Router() {
         { path: 'commerce', element: <CubikaApp title={'cubika'} /> },
         { path: 'user', element: <UserPage /> },
         { path: 'products', element: <ProductsPage /> },
-        { path: 'blog', element: <CubikaApp title={'blog'} /> },
+        { path: 'blog', element: <BlogPage /> },
         { path: 'analytics', element: <CubikaApp title={'analytics'} /> },
       ],
     },

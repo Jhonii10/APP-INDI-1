@@ -60,7 +60,7 @@ const Sidebar = ({draweWidth, openNav, onCloseNav, onToggleDrawerWidth}) => {
             <IconButton
             onClick={toggleSidebarWidth}
              sx={{
-                display:{xs:'none', md:'inline-flex'},
+                display:{xs:'none', lg:'inline-flex'},
                 position:'fixed',   
                 padding:'4px',
                 top:'50px',
