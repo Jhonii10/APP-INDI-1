@@ -40,6 +40,9 @@ h4 {
   height: 400px;
   background-color: rgba(229, 229, 229, 0.2);
   backdrop-filter: blur(20px);
+  background-image: url('/public/assets/cyan-blur.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 5px;
   box-shadow: 0 5px 8px #0003, 0 9px 26px #00000030;
   padding: 5%;
@@ -253,11 +256,8 @@ h4 {
 
 
 .auth-container{
-  background-image: url('https://assets-cdn.123rf.com/landing/assets/images/free-images/banner-september-v2.jpg');
    height: calc(100vh - 176px) ; 
   display: grid;
   place-content: center;
-  background-repeat:no-repeat;
-  object-fit: cover;
   
 } 

@@ -31,7 +31,7 @@ export default function AnalyticsPage() {
 
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5, textAlign:'left' }}>
-          Analytics
+         Analítica
         </Typography>
 
         <Grid container spacing={3}>

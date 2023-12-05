@@ -10,9 +10,9 @@ import POSTS from '../components/_mock/blog';
 // ----------------------------------------------------------------------
 
 const SORT_OPTIONS = [
-  { value: 'latest', label: 'Latest' },
+  { value: 'latest', label: 'Más reciente' },
   { value: 'popular', label: 'Popular' },
-  { value: 'oldest', label: 'Oldest' },
+  { value: 'oldest', label: 'Más antiguo' },
 ];
 
 // ----------------------------------------------------------------------
@@ -30,7 +30,7 @@ export default function BlogPage() {
             Blog
           </Typography>
           <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
-            New Post
+            Nueva Publicacion
           </Button>
         </Stack>
 
