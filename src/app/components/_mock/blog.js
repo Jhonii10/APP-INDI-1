@@ -1,32 +1,31 @@
 import { faker } from '@faker-js/faker';
 
 // ----------------------------------------------------------------------
-
 const POST_TITLES = [
-  'Whiteboard Templates By Industry Leaders',
-  'Tesla Cybertruck-inspired camper trailer for Tesla fans who can’t just wait for the truck!',
-  'Designify Agency Landing Page Design',
-  '✨What is Done is Done ✨',
-  'Fresh Prince',
+  'Plantillas de Pizarra por Líderes de la Industria',
+  '¡Remolque Camper inspirado en Tesla Cybertruck para fanáticos de Tesla que no pueden esperar por el camión!',
+  'Diseño de la Página de Destino de la Agencia Designify',
+  '✨Lo Hecho, Hecho Está ✨',
+  'Príncipe del Rap',
   'Six Socks Studio',
-  'vincenzo de cotiis’ crossing over showcases a research on contamination',
-  'Simple, Great Looking Animations in Your Project | Video Tutorial',
-  '40 Free Serif Fonts for Digital Designers',
-  'Examining the Evolution of the Typical Web Design Client',
-  'Katie Griffin loves making that homey art',
-  'The American Dream retold through mid-century railroad graphics',
-  'Illustration System Design',
-  'CarZio-Delivery Driver App SignIn/SignUp',
-  'How to create a client-serverless Jamstack app using Netlify, Gatsby and Fauna',
-  'Tylko Organise effortlessly -3D & Motion Design',
-  'RAYO ?? A expanded visual arts festival identity',
-  'Anthony Burrill and Wired mag’s Andrew Diprose discuss how they made January’s Change Everything cover',
-  'Inside the Mind of Samuel Day',
-  'Portfolio Review: Is This Portfolio Too Creative?',
+  'vincenzo de cotiis’ cruzando exhibe una investigación sobre la contaminación',
+  'Animaciones Sencillas y Atractivas en Tu Proyecto | Video Tutorial',
+  '40 Fuentes Serif Gratis para Diseñadores Digitales',
+  'Examinando la Evolución del Cliente Típico de Diseño Web',
+  'A Katie Griffin le encanta hacer ese arte hogareño',
+  'El Sueño Americano Recontado a través de Gráficos Ferroviarios de Mediados de Siglo',
+  'Diseño de Sistema de Ilustración',
+  'CarZio-App de Inicio de Sesión/Registro del Conductor de Entrega',
+  'Cómo crear una aplicación Jamstack sin servidor de cliente usando Netlify, Gatsby y Fauna',
+  'Tylko Ordena sin esfuerzo - Diseño 3D y en Movimiento',
+  'RAYO ?? Identidad del festival de artes visuales expandida',
+  'Anthony Burrill y Andrew Diprose de la revista Wired discuten cómo hicieron la portada de enero de Change Everything',
+  'Dentro de la Mente de Samuel Day',
+  'Revisión de Portafolio: ¿Es Este Portafolio Demasiado Creativo?',
   'Akkers van Margraten',
-  'Gradient Ticket icon',
-  'Here’s a Dyson motorcycle concept that doesn’t ‘suck’!',
-  'How to Animate a SVG with border-image',
+  'Ícono de boleto degradado',
+  '¡Aquí hay un concepto de motocicleta Dyson que no apesta!',
+  'Cómo animar un SVG con border-image',
 ];
 
 const posts = [...Array(23)].map((_, index) => ({
@@ -34,14 +33,17 @@ const posts = [...Array(23)].map((_, index) => ({
   cover: `/assets/images/covers/cover_${index + 1}.jpg`,
   title: POST_TITLES[index + 1],
   createdAt: faker.date.past(),
-  view: faker.person.firstName(),
-  comment: faker.person.firstName(),
-  share: faker.person.firstName(),
-  favorite: faker.person.firstName(),
+  view: faker.number.int({ max: 99999 }),
+  comment:faker.number.int({ max: 99999 }),
+  share: faker.number.int({ max: 99999 }),
+  favorite: faker.number.int({ max: 99999 }),
   author: {
     name: faker.person.firstName(),
     avatarUrl: `/assets/images/avatars/avatar_${index + 1}.jpg`,
   },
 }));
 
+
 export default posts;
+
+
