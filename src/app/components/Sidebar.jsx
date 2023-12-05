@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import Iconify from "./iconify/Iconify";
 
 
-const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{width:'30px', height:'30px', backgroundColor:'rgb(7, 141, 238)'}}/>;
+const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{width:'40px', height:'40px', backgroundColor:'black'}}/>;
 
 const StyledAccount = styled('div')(({ theme }) => ({
     display: 'flex',

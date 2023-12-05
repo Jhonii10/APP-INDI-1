@@ -125,7 +125,7 @@ const Footer = () => {
         <div className="text-center sm:flex sm:justify-between sm:text-left">
 
           <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
-            © 2023 Company Name
+            © 2023 Company Name -  by Jhoni ipia 10 ⭐
           </p>
         </div>
       </div>
