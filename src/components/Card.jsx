@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Card = ({categoria,nombre,id}) => {
+const Card = ({categoria,nombre}) => {
 
     const path = `/assets/banner-products/${categoria}.png`
 
@@ -15,7 +15,7 @@ const Card = ({categoria,nombre,id}) => {
   <div className="">
     <div className="">
       <img
-        alt={nombre}
+        alt={categoria}
         src={path}
         className=""
         data-is-loaded="true"

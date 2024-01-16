@@ -22,7 +22,7 @@ const Testimonial = () => {
     {
         nombre:'Regálale a los más pequeños un mundo lleno de creatividad con nuestros juguetes para niñas, niños, bebés y enséñales de una forma divertida a aprender con nuestros juguetes didácticos o educativos. Ven a tu nuestra tienda más cercana.',
         id:'carros',
-        categoria:'juguetes',
+        categoria:'Juguetes',
         type:'Juguetes'
 
     },
@@ -30,7 +30,7 @@ const Testimonial = () => {
         nombre:'Cocinar es un arte en el que necesitas las herramientas perfectas para conquistar el paladar de tus seres queridos. Encuentra sartenes, ollas, tablas para picar, temporizadores y mucho más. Visita tu sala más cercana.',
         id:'tubos',
         categoria:'Cocina',
-        type:'navidad'
+        type:'Cocina'
 
     },
    ]
