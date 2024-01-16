@@ -13,23 +13,23 @@ const Testimonial = () => {
 
    const products = [
     {
-        nombre:'Jumping Сlowns',
+        nombre:'Si estás pensando en remodelar y agregar nuevos estilos en la decoración de tu hogar u oficina, el lugar ideal para encontrar: portarretratos, espejos, cuadros decorativos, floreros, adornos de cerámica, cortinas, alfombras y mucho más. ¡Te esperamos!',
         id:'peces',
-        categoria:'hogar',
+        categoria:'Hogar',
         type:'hogar'
 
     },
     {
-        nombre:'Fishing game',
+        nombre:'Regálale a los más pequeños un mundo lleno de creatividad con nuestros juguetes para niñas, niños, bebés y enséñales de una forma divertida a aprender con nuestros juguetes didácticos o educativos. Ven a tu nuestra tienda más cercana.',
         id:'carros',
         categoria:'juguetes',
-        type:'juguetes'
+        type:'Juguetes'
 
     },
     {
-        nombre:'Crane truck',
+        nombre:'Cocinar es un arte en el que necesitas las herramientas perfectas para conquistar el paladar de tus seres queridos. Encuentra sartenes, ollas, tablas para picar, temporizadores y mucho más. Visita tu sala más cercana.',
         id:'tubos',
-        categoria:'navidad',
+        categoria:'Cocina',
         type:'navidad'
 
     },

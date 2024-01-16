@@ -15,9 +15,10 @@ const ProductosSecren = () => {
     const location = locations.pathname
     const rutaDividida = location.split("/"); // Dividir la ruta en segmentos usando "/" como separador
     const rutaProductos = rutaDividida.slice(0, -1).join(""); // Obtener la ruta sin el último segmento
-    const {categoria,id} = category.find((e)=> e.categoria === categoryId)
-    const path = `/assets/${categoryId}-${id}.png`
+    const {categoria , nombre} = category.find((e)=> e.categoria === categoryId)
+    const path = `/assets/banner-products/${categoryId}.png`
    
+    console.log(nombre)
     
 
 
@@ -58,7 +59,7 @@ const ProductosSecren = () => {
       <div aria-hidden="true" className="styles_features__EpKfd">
         <div className="styles_features_item__D_aoh lg:text-left">
           <div className="styles_features_item__img__E43C4">
-            <p className='mb-16'>Regálale a los más pequeños un mundo lleno de creatividad con nuestros juguetes para niñas, niños, bebés y enséñales de una forma divertida a aprender con nuestros juguetes didácticos o educativos.  Ven a tu [empresa] más cercano.</p>
+            <p className='mb-16'>{nombre}</p>
           </div>
           <div className="styles_features_item__name__hGNT7 text-sm  mb-8" >*La disponibilidad de nuestro inventario está sujeta a existencias y rotación de ventas en cada una de nuestras sucursales.</div>
         </div>
