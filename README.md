@@ -1,4 +1,10 @@
-# APP IND 
+<p align="center">
+  <img alt="Logo" src="./public/assets/logoInd.svg" width="100" />
+</p>
 
-Nos encontramos en la parte final del proyecto:
-[Haz clic aquí para acceder a la versión beta](https://inversionesdiomardisas.netlify.app)
+<h1 align="center">
+   Inversiones Diomardi Sas
+</h1>
+
+
+![demo](https://jhoniipia.vercel.app/assets/images/featured/inversionesdiomardi.png)

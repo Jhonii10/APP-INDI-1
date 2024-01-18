@@ -73,7 +73,8 @@ const Navbar = () => {
                 <path d="M330 2500 l0 -230 250 0 250 0 0 230 0 230 -250 0 -250 0 0 -230z" fill='#e65100'/>
                 <path d="M330 1150 l0 -930 250 0 250 0 0 930 0 930 -250 0 -250 0 0 -930z" fill='#26c6da'/>
               </g>
-            </svg>
+            </svg> 
+            
 
           </NavLink>
           <div className="flex flex-1 items-center justify-end md:justify-between"> 
