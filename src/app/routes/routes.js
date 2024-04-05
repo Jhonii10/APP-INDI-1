@@ -19,7 +19,7 @@ export default function Router() {
         { path: 'user', element: <UserPage /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
-        { path: 'analytics', element: <AnalyticsPage/> },
+        { path: 'analytics',   element: <AnalyticsPage/> },
       ],
     },
     {
